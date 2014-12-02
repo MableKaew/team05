@@ -11,6 +11,7 @@ public class User {
 	@Id
 	@GeneratedValue
 	private long id;
+	
 
 	public long getId() {
 		return id;
