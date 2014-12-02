@@ -7,6 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Message {
+<<<<<<< HEAD
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -14,3 +15,14 @@ public class Message {
 	private String message;
 
 }
+=======
+	
+@Id
+@GeneratedValue
+private Long id;
+
+@Column
+private String message;
+
+}
+>>>>>>> dev
