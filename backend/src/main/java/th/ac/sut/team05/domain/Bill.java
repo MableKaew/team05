@@ -8,10 +8,11 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Bill {
-<<<<<<< HEAD
+
 	
 	@Id
 	@GeneratedValue
@@ -30,54 +31,13 @@ public class Bill {
 	private int postCode;
 	@Column
 	private int tel;
-	public enum Delivery { EMS, registered }
-	@Enumerated
-	private Delivery deliveryType;
+
+	@Column(columnDefinition = "ENUM('EMS','registered')")
+	private String deliveryType;
 	@Column
 	private int netPrice;
-	@Temporal(javax.persistence.TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIMESTAMP)
     private Date dateTime;
-
-}
-
-=======
-
-	@Id
-	@GeneratedValue
-	private Long id;
-	
-	@Column
-	private String idBill;
-	
-	@Column
-	private String nameReceive;
-	
-	@Column
-	private String address;
-	
-	@Column
-	private String district;
-	
-	@Column
-	private String province;
-	
-	@Column
-	private int postCode;
-	
-	@Column
-	private int tel;
-	
-	public enum Delivery {EMS,registered}
-	
-	@Enumerated
-	private Delivery deliveryType;
-	
-	@Column
-	private int netPrice;
-	
-	@Temporal(javax.persistence.TemporalType.TIMESTAMP)
-	private Date dateTime;
-	
 	public Long getId() {
 		return id;
 	}
@@ -126,10 +86,10 @@ public class Bill {
 	public void setTel(int tel) {
 		this.tel = tel;
 	}
-	public Delivery getDeliveryType() {
+	public String getDeliveryType() {
 		return deliveryType;
 	}
-	public void setDeliveryType(Delivery deliveryType) {
+	public void setDeliveryType(String deliveryType) {
 		this.deliveryType = deliveryType;
 	}
 	public int getNetPrice() {
@@ -144,6 +104,10 @@ public class Bill {
 	public void setDateTime(Date dateTime) {
 		this.dateTime = dateTime;
 	}
+	
 
 }
->>>>>>> dev
+
+
+
+	
