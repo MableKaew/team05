@@ -26,6 +26,7 @@ public class Message {
 		this.message = message;
 	}
 
+	
 }
 
 	
