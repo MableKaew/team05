@@ -8,6 +8,16 @@ import javax.persistence.Id;
 @Entity
 public class basket {
 
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+	@Column
+	private String idBasket;
+	@Column
+	private int amountBuy;
+	@Column
+	private String datetime;
 	public Long getId() {
 		return id;
 	}
@@ -32,16 +42,6 @@ public class basket {
 	public void setDatetime(String datetime) {
 		this.datetime = datetime;
 	}
-	@Id
-	@GeneratedValue
-	private Long id;
-	@Column
-	private String idBasket;
-	@Column
-	private int amountBuy;
-	@Column
-	private String datetime;
-
 	}
 
 
