@@ -13,30 +13,33 @@ import th.ac.sut.team05.repository.MemberRepository;
 
 @RestController
 public class LoginController {
-@Autowired
-private AdminRepository adminRepo;
-@Autowired
-private MemberRepository memberRepo;
+	@Autowired
+	private AdminRepository adminRepo;
+	@Autowired
+	private MemberRepository memberRepo;
 
-@RequestMapping("/user/lgin/{us}/{pw}")
-@ResponseBody
-public String loginCheck(@PathVariable("us") String userName, @PathVariable("pw") String passWord){
-	String result="";
-	Admin admin =adminRepo.findOneByUserNameAndPassWord(userName, passWord);
-	Member member=memberRepo.findOneByUserNameAndPassWord(userName, passWord);
-	if(admin != null){
-		result+= admin.getId();
-		result+=":";
-		result+=admin.getLevel();
-	}else if(member != null){
-		result+= member.getId();
-		result+=":";
-		result+=member.getLevel();
-	}else{
-		result = "null";
-		
+	@RequestMapping("/user/login/{us}/{pw}")
+	@ResponseBody
+	public String loginCheck(@PathVariable("us") String userName,
+			@PathVariable("pw") String passWord) {
+		String result = "";
+		Admin admin = adminRepo
+				.findOneByUserNameAndPassWord(userName, passWord);
+		Member member = memberRepo.findOneByUserNameAndPassWord(userName,
+				passWord);
+		if (admin != null) {
+			result += admin.getId();
+			result += ":";
+			result += admin.getLevel();
+		} else if (member != null) {
+			result += member.getId();
+			result += ":";
+			result += member.getLevel();
+		} else {
+			result = "null";
+
+		}
+
+		return result;
 	}
-	
-	return result;
-}
 }
