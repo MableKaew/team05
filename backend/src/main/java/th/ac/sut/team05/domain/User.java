@@ -4,9 +4,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
 
-@Entity
+@MappedSuperclass
 public class User {
 
 
@@ -15,10 +16,10 @@ public class User {
 	private long id;
 	
 	@Column
-	private String username;
+	private String userName;
 	
 	@Column
-	private String password;
+	private String passWord;
 	
 	@Column
 	private String name;
@@ -40,20 +41,20 @@ public class User {
 	
 	
 	
-	public String getUsername() {
-		return username;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String username) {
+		this.userName = username;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getPassWord() {
+		return passWord;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassWord(String password) {
+		this.passWord = password;
 	}
 
 	public String getName() {
