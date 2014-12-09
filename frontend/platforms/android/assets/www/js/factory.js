@@ -16,8 +16,8 @@ sys.app.factory('Auth', function() {
 
 sys.app.factory('Shared', function() {
 	var id = 0;
-	var teacherId = 0;
-	var courseId = 0;
+	var memberId = 0;
+	
 	var edituser = {};
 	var datas = {};
 	var baseUrl = 'http://localhost:8080';
@@ -44,17 +44,11 @@ sys.app.factory('Shared', function() {
 		getEditUser: function() {
 			return edituser;
 		},
-		getTeacherId: function() {
-			return teacherId;
+		getMemberId: function() {
+			return memberId;
 		},
-		setTeacherId: function(id) {
-			teacherId = id;
-		},
-		getCourseId: function() {
-			return courseId;
-		},
-		setCourseId: function(id) {
-			courseId = id;
+		setMemberId: function(id) {
+			memberId = id;
 		}
 	};
 	
@@ -62,51 +56,19 @@ sys.app.factory('Shared', function() {
 
 
 sys.app.service('sharedProperties',function(){
-	var level = 1;
-	var room = 1;
-	var groupname = null;
-	var semester = 1;
-	var years = 2557;
-	var teachid = 0;
+
+	var memberid = 0;
 	var arr = new Array();
 	arr = [0];
 	return {
-		getlevel: function(){
-			return level;
+	
+		getmemberid: function(){
+			return memberid;
 		},
-		setlevel: function(value){
-			level = value;
+		setmemberid: function(value){
+			memberid = value
 		},
-		getroom: function(){
-			return room;
-		},
-		setroom: function(value){
-			room = value;
-		},
-		getgroupname: function(){
-			return groupname;
-		},
-		setgroupname: function(value){
-			groupname = value;
-		},
-		getsemester: function(){
-			return semester;
-		},
-		setsemester: function(value){
-			semester = value;
-		},
-		getteachid: function(){
-			return teachid;
-		},
-		setteachid: function(value){
-			teachid = value
-		},
-		getyears: function(){
-			return years;
-		},
-		setyears: function(value){
-			years = value;
-		},
+	
 		getarr:function(){
 			return arr;
 		},
