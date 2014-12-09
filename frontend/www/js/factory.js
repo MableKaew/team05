@@ -68,12 +68,7 @@ sys.app.service('sharedProperties',function(){
 		setmemberid: function(value){
 			memberid = value
 		},
-		getyears: function(){
-			return years;
-		},
-		setyears: function(value){
-			years = value;
-		},
+	
 		getarr:function(){
 			return arr;
 		},
