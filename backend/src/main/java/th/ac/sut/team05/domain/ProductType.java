@@ -1,5 +1,7 @@
 package th.ac.sut.team05.domain;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,19 +21,6 @@ public class ProductType {
 	@Column 
 	private String name;
 	
-	@OneToMany
-	private Product have;
-	
-	
-
-	public Product getHave() {
-		return have;
-	}
-
-	public void setHave(Product have) {
-		this.have = have;
-	}
-
 	public Long getId() {
 		return id;
 	}
@@ -55,4 +44,19 @@ public class ProductType {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public Collection<Product> getHave() {
+		return have;
+	}
+
+	public void setHave(Collection<Product> have) {
+		this.have = have;
+	}
+
+	@OneToMany
+	private Collection<Product> have;
+	
+	
+
+	
 }
