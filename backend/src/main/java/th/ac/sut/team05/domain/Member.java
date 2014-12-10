@@ -1,7 +1,10 @@
 package th.ac.sut.team05.domain;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Member extends User{
@@ -9,13 +12,8 @@ public class Member extends User{
 	@Column
 	private String memberId;
 
-	public String getMemberId() {
-		return memberId;
-	}
+	@OneToMany
+ 	private Collection<basket> order;
 
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
-	}
-	
 
 }

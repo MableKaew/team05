@@ -1,9 +1,12 @@
 package th.ac.sut.team05.domain;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class basket {
@@ -16,32 +19,51 @@ public class basket {
 	private String idBasket;
 	@Column
 	private int amountBuy;
+
 	@Column
 	private String datetime;
+	
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getIdBasket() {
 		return idBasket;
 	}
+
 	public void setIdBasket(String idBasket) {
 		this.idBasket = idBasket;
 	}
+
 	public int getAmountBuy() {
 		return amountBuy;
 	}
+
 	public void setAmountBuy(int amountBuy) {
 		this.amountBuy = amountBuy;
 	}
+
 	public String getDatetime() {
 		return datetime;
 	}
+
 	public void setDatetime(String datetime) {
 		this.datetime = datetime;
 	}
+
+	public Collection<Product> getHave() {
+		return have;
 	}
 
+	public void setHave(Collection<Product> have) {
+		this.have = have;
+	}
 
+	@OneToMany
+	private Collection<Product> have;
+
+	}
