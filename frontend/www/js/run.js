@@ -5,7 +5,7 @@ sys.app.run(function ($rootScope, $location, Auth, $route) {
             console.log('DENY');
             event.preventDefault();
             $location.path('/login');
-            MainMenu.setSwipable(false);
+            menu.setSwipable(false);
         } else {
             console.log('ALLOW');
             var path = $location.path();
@@ -13,7 +13,7 @@ sys.app.run(function ($rootScope, $location, Auth, $route) {
             $location.path(path);
 
             if(user.level == 'ADMIN'){
-            	MainMenu.setSwipable(true);
+            	menu.setSwipable(true);
             } else {
             	//MainMenu.setSwipable(false);
             }

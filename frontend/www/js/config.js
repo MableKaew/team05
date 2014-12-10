@@ -11,13 +11,17 @@ sys.app.config(function($sceDelegateProvider, $routeProvider, $locationProvider)
 	   templateUrl: '_login.html',
    })
    .when('/index', {
-	   templateUrl: '_home.html',	
+	   templateUrl: 'page1.html',	
    })
    
    .when('/user', {
 	   templateUrl: 'shop-user/index.html'
    })
-  
+   
+  .when('/member', {
+	   templateUrl: 'page2.html'
+   })
+   
    .otherwise({
        redirectTo: '/notfound'
    });
