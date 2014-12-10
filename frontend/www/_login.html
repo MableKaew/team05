@@ -1,0 +1,22 @@
+<meta charset="utf-8" />
+<ons-page >
+	<ons-toolbar>
+		<div class="center">
+			เข้าสู่ระบบ
+		</div>
+	</ons-toolbar>
+	<div class="login-form" ng-show='!checkLogin'>
+	
+				
+		
+        <input ng-model="userName" type="text" class="text-input--underbar" placeholder="ชื่อผู้ใช้งาน" style="margin-top:50px; width: 100%;">
+    <br><br>
+        <input ng-model="passWord" type="password" class="text-input--underbar" placeholder="รหัสผ่าน" style="margin-top:8px; width: 100%;">
+  
+        
+        <br><br>
+        <ons-button  modifier="large" class="login-button">
+       		 เข้าใช้งานระบบ
+        </ons-button>
+	</div>
+</ons-page>

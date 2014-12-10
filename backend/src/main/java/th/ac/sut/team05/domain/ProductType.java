@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class ProductType {
@@ -17,6 +18,19 @@ public class ProductType {
 	
 	@Column 
 	private String name;
+	
+	@OneToMany
+	private Product have;
+	
+	
+
+	public Product getHave() {
+		return have;
+	}
+
+	public void setHave(Product have) {
+		this.have = have;
+	}
 
 	public Long getId() {
 		return id;

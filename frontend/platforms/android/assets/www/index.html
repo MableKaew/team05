@@ -21,9 +21,12 @@
   <script src="js/app.js"></script>
   <script src="js/config.js"></script>
   <script src="js/factory.js"></script>
+
   
   <script src="js/controller/MenuController.js"></script>
   <script src="js/controller/MainController.js"></script>
+  <script src="js/controller/LoginController.js"></script>
+  
   	
   <script>
   		sys.initialize();
@@ -36,9 +39,9 @@
 
 <body>    
   <ons-navigator var="MainNavigator"> 
-  <ons-sliding-menu
+  <ons-sliding-menu var="menu"
     menu-page="_menu.html" main-page="page1.html" side="left"
-    var="menu" type="reveal" max-slide-distance="260px" swipable="true">
+    type="reveal" max-slide-distance="260px" swipable="true">
   </ons-sliding-menu>
 </ons-navigator>
  
