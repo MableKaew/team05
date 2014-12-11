@@ -15,5 +15,21 @@ public class Member extends User{
 	@OneToMany
  	private Collection<basket> order;
 
+	public String getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
+	}
+
+	public Collection<basket> getOrder() {
+		return order;
+	}
+
+	public void setOrder(Collection<basket> order) {
+		this.order = order;
+	}
+
 
 }
