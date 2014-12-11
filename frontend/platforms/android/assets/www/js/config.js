@@ -22,6 +22,29 @@ sys.app.config(function($sceDelegateProvider, $routeProvider, $locationProvider)
 	   templateUrl: 'page2.html'
    })
    
+   .when('/MemberTransferMoney', {
+	   templateUrl: 'Shop-Atikom/index.html'
+   })
+   
+    .when('/MemberBill', {
+	   templateUrl: 'Shop-Jaris/index.html'
+   })
+   
+    .when('/AdminManageProduct', {
+	   templateUrl: 'Shop-Kamthorn/index.html'
+   })
+   
+     .when('/MemberSelectProduct', {
+	   templateUrl: 'Shop-mallika/index.html'
+   })
+   
+     .when('/MemberBasket', {
+	   templateUrl: 'Shop-Santipab/index.html'
+   })
+   
+     .when('/AdminResultMoney', {
+	   templateUrl: 'Shop-Kamthorn/index.html'
+   })
    .otherwise({
        redirectTo: '/notfound'
    });

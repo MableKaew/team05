@@ -25,14 +25,14 @@ private MemberRepository memberRepo;
 @ResponseBody
 public String addAdmin(@Valid @RequestBody Admin admin){
 	adminRepo.save(admin);
-	return "ºÑ¹·Ö¡ÊÓàÃç¨";
+	return "ï¿½Ñ¹ï¿½Ö¡ï¿½ï¿½ï¿½ï¿½ï¿½";
 }
 
 @RequestMapping("/admin/delete/{id}")
 @ResponseBody
 public String deleteAdmin(@PathVariable("id") Long id){
 	adminRepo.delete(id);
-	return "ÅºÊÓàÃç¨";
+	return "Åºï¿½ï¿½ï¿½ï¿½ï¿½";
 }
 
 @RequestMapping("/admin/edit/{id}")
@@ -47,14 +47,14 @@ public String editAdmin(@PathVariable("id") Long id){
 @ResponseBody
 public String addMember(@Valid @RequestBody Member member){
 	memberRepo.save(member);
-	return "ºÑ¹·Ö¡ÊÓàÃç¨";
+	return "ï¿½Ñ¹ï¿½Ö¡ï¿½ï¿½ï¿½ï¿½ï¿½";
 }
 
 @RequestMapping("/member/delete/{id}")
 @ResponseBody
 public String deleteMember(@PathVariable("id") Long id){
 	memberRepo.delete(id);
-	return "ÅºÊÓàÃç¨";
+	return "Åºï¿½ï¿½ï¿½ï¿½ï¿½";
 }
 
 @RequestMapping("/member/edit/{id}")
