@@ -47,7 +47,7 @@ public String editAdmin(@PathVariable("id") Long id){
 @ResponseBody
 public String addMember(@Valid @RequestBody Member member){
 	memberRepo.save(member);
-	return "�ѹ�֡�����";
+	return "Summit Success";
 }
 
 @RequestMapping("/member/delete/{id}")
