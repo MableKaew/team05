@@ -25,7 +25,7 @@ private MemberRepository memberRepo;
 @ResponseBody
 public String addAdmin(@Valid @RequestBody Admin admin){
 	adminRepo.save(admin);
-	return "�ѹ�֡�����";
+	return "Summit Success";
 }
 
 @RequestMapping("/admin/delete/{id}")
