@@ -1,0 +1,52 @@
+<meta charset="UTF-8" />
+<ons-page ng-controller="ManageUserController">
+	<ons-toolbar>
+		<div class="left">
+			<ons-back-button>ยกเลิก</ons-back-button>
+		</div>
+		<div class="center">Member</div>
+		<div class="right">
+			<ons-button modifier="quiet" ng-click="addMember()">
+				บันทึก
+			</ons-button>
+		</div>
+	</ons-toolbar>
+
+	<div>
+		<ons-list>
+			<ons-list-header>ข้อมูลการเข้าใช้งาน</ons-list-header>
+	        <ons-list-item>
+	        	<input ng-model="userName" type="text" class="text-input--transparent" placeholder="ชื่อผู้ใช้งาน">
+	        </ons-list-item>
+	        <ons-list-item>
+	        	<input ng-model="passWord" type="password" class="text-input--transparent" placeholder="รหัสผู้ใช้งาน">
+	        </ons-list-item>
+	        <ons-list-header>ข้อมูลทั่วไป</ons-list-header>
+	        <ons-list-item>	
+		        <div style="float: left; font-weight: bold;">เพศ</div>
+		        <div style="float: right; padding-right: 10px;">			
+					<label class="radio-button">
+					  <input type="radio" name="sex" ng-model="sex" value="MALE">
+					  <div class="radio-button__checkmark"></div> ชาย
+					</label> 
+					<label class="radio-button">
+					  <input type="radio" name="sex" ng-model="sex" value="FEMALE">
+					  <div class="radio-button__checkmark"></div> หญิง
+					</label>  
+				</div> 	
+	        </ons-list-item>
+	        <ons-list-item>
+	        	<input ng-model="name" type="text" class="text-input--transparent" placeholder="ชื่อจริง">
+	        </ons-list-item>
+	        <ons-list-item>
+	        	<input ng-model="lastname" type="text" class="text-input--transparent" placeholder="นามสกุล">
+	        </ons-list-item>
+	        <ons-list-item>
+	        	<input ng-model="email" type="text" class="text-input--transparent" placeholder="อีเมลล์">
+	        </ons-list-item>
+	        <ons-list-item>
+	        	<input ng-model="tel" type="text" class="text-input--transparent" placeholder="เบอร์โทร">
+	        </ons-list-item>
+		</ons-list>
+	</div>
+</ons-page>
