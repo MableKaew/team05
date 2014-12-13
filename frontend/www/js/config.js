@@ -11,12 +11,17 @@ sys.app.config(function($sceDelegateProvider, $routeProvider, $locationProvider)
 	   templateUrl: '_login.html',
    })
    .when('/index', {
-	   templateUrl: 'page1.html',	
+	   templateUrl: '_home.html',	
+   })
+   
+    .when('/notfound', {
+	   templateUrl: 'notpage.html'
    })
    
    .when('/user', {
 	   templateUrl: 'shop-user/index.html'
    })
+   
    
   .when('/member', {
 	   templateUrl: 'page2.html'
@@ -49,6 +54,6 @@ sys.app.config(function($sceDelegateProvider, $routeProvider, $locationProvider)
        redirectTo: '/notfound'
    });
    
-   // configure html5 to get links working on jsfiddle
+// configure html5 to get links working on jsfiddle
    $locationProvider.html5Mode(true);
-});
+	 });

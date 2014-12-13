@@ -18,8 +18,8 @@ sys.app.controller('ManageUserController', function($scope, $http, Shared) {
 			};
 			
 			$http.post(baseUrl + subUrl, data).success(function(data){
-				//alert(data);
-			//	MainNavigator.pushPage("_login.html");
+				alert(data);
+			MainNavigator.pushPage("index.html");
 			});
 		}
 		

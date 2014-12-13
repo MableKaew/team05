@@ -5,7 +5,7 @@ sys.app.run(function ($rootScope, $location, Auth, $route) {
             console.log('DENY');
             event.preventDefault();
             $location.path('/login');
-            menu.setSwipable(false);
+            menu.setSwipable(true);
         } else {
             console.log('ALLOW');
             var path = $location.path();
