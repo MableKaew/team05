@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+<ons-page ng-controller="ViewProductTypeController">
+   
+   <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="menu.toggle()">
+            <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">หมวดสินค้า</div>
+   </ons-toolbar>
+   <div>
+      <ons-list style="margin: auto 0px auto 0px;">
+      
+      <ons-list-item modifier="chevron" ng-repeat="productType in productTypes">
+      		<label ng-click="showProduct(productType.id)">
+      		{{productType.name}}
+      		
+      		</label>
+      </ons-list-item>
+      
+      </ons-list>
+   </div>
+   
+   <ons-modal var = "ModalProduct">
+     
+  
+   
+      <ons-list style="margin: 15px;" >
+      
+      <ons-list-item class="center">{{productType.name}}</ons-list-item>
+      
+      <ons-list-item modifier="chevron" ng-repeat="product in products">
+      		<label >
+      		
+      		{{d.have}}
+      	
+      		
+      		</label>
+      </ons-list-item>
+       
+      </ons-list>
+  
+   				
+ 
+   </ons-modal>
+   <ons-modal var = "ModalProducts">
+     
+  
+   
+      <ons-list style="margin: 15px;" >
+      <div ng-repeat="product in products">
+      <ons-list-item class="center">{{productType.name}}</ons-list-item>
+      
+      <ons-list-item modifier="chevron" ng-repeat="d in product['have']">
+      		<label >
+      		<row>
+      		{{d.name}}
+      		</row>
+      		<row>
+      		{{d.price}}
+      		</row>
+      		<row>
+      		จำนวนสินค้า :{{d.amount}}
+      		</row>
+      		
+      		</label>
+      </ons-list-item>
+       </div>
+      </ons-list>
+  
+   				
+ 
+   </ons-modal>
+   </ons-page>
