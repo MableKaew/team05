@@ -14,12 +14,12 @@ sys.app.run(function ($rootScope, $location, Auth, $route) {
             $location.path(path);
         
 
-            if(user.level == 'ADMIN'){
+            if(user.level == 'USER'){
             	
-            	menu.setSwipable(false);
+            	menu.setSwipable(true);
             	
             } else {
-            	menu.setSwipable(true);
+            	//menu.setSwipable(true);
             }
 
             if(path == '/logout'){

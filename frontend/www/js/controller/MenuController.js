@@ -9,7 +9,7 @@ sys.app.controller('MenuController', function($scope, $http, $location, Auth) {
 	// ลิ้งจากเมนูหลัก
 	$scope.menuGotoPage = function(url) {
 		$location.path('/' + url);
-		MainMenu.closeMenu();
+		menu.closeMenu();
 	} 
 	
 });
