@@ -5,17 +5,21 @@ sys.app.run(function ($rootScope, $location, Auth, $route) {
             console.log('DENY');
             event.preventDefault();
             $location.path('/login');
-            menu.setSwipable(true);
+            menu.setSwipable(false);
+           
         } else {
             console.log('ALLOW');
             var path = $location.path();
             var user = Auth.getUser();
             $location.path(path);
+        
 
             if(user.level == 'ADMIN'){
-            	menu.setSwipable(true);
+            	
+            	menu.setSwipable(false);
+            	
             } else {
-            	//MainMenu.setSwipable(false);
+            	menu.setSwipable(true);
             }
 
             if(path == '/logout'){

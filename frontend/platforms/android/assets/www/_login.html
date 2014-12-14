@@ -1,5 +1,6 @@
 <meta charset="utf-8" />
-<ons-page >
+<ons-navigator title="loginNavigator" var="loginNavigator">
+<ons-page ng-controller = "LoginController">
 	<ons-toolbar>
 		<div class="center">
 			เข้าสู่ระบบ
@@ -15,8 +16,19 @@
   
         
         <br><br>
-        <ons-button  modifier="large" class="login-button" ng-click="menu.setMainPage('Shop-mallika/index.html', {closeMenu: true})">
+        <ons-button  modifier="large" class="login-button" ng-click="login()">
        		 เข้าใช้งานระบบ
         </ons-button>
 	</div>
+	<br>
+	<ons-list>
+	
+	<ons-list-item modifier="chevron" onclick="loginNavigator.pushPage('Shop-mallika/user-productType.html', { animation : 'slide' } )">
+	 <ons-icon icon="fa-bookmark"></ons-icon>
+          เลือกดูสินค้า
+	</ons-list-item>
+	<ons-list-item modifier="chevron" onclick="loginNavigator.pushPage('shop-user/index.html', { animation : 'slide' } )">
+	  สมัครสมาชิก
+	</ons-list-item>
+	</ons-list>
 </ons-page>

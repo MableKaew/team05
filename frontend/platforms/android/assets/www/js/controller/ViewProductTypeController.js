@@ -7,10 +7,11 @@ sys.app.controller('ViewProductTypeController',function($scope, $http, Shared){
 		});
 	}
 	$scope.showProductTypeAll();
-	$scope.showProduct = function(id){
+	$scope.showProduct = function(id,have){
 		var subUrl='/productype/show/'+id;
 		$http.get(baseUrl + subUrl).success(function(data){
 			$scope.products=data;
+			
 		});
 		ModalProduct.show();
 	}
@@ -19,6 +20,6 @@ sys.app.controller('ViewProductTypeController',function($scope, $http, Shared){
 		$http.get(baseUrl + subUrl).success(function(data){
 			$scope.datas=data;
 		});
-		//ModalDetail.show();
+		ModalDetail.show();
 	}
 });
