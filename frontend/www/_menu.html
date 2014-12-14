@@ -1,7 +1,10 @@
 <meta charset="utf-8">
- <ons-page modifier="menu-page">
+ <ons-page modifier="menu-page" ng-controller ="MenuController">
       <ons-toolbar modifier="transparent"></ons-toolbar>
-
+<ons-list-item class="bottom-menu-item" ng-click="menuGotoPage('index')" style="color: #FFF;">
+			<ons-icon icon="fa-home"></ons-icon>
+			หน้าหลัก
+		</ons-list-item>
       <ons-list class="menu-list">
         <ons-list-item class="menu-item" ng-click="menu.setMainPage('Shop-mallika/productType.html', {closeMenu: true})">
           <ons-icon icon="fa-plus"></ons-icon>
@@ -22,15 +25,19 @@
       <br>
 
       <ons-list class="bottom-menu-list">
-        <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('Shop-Santipab/index.html', {closeMenu: true})">
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('Shop-Santipab/index.html', {closeMenu: true})">
+      <ons-icon icon="fa-plus"></ons-icon>    
           ตะกร้าสินค้า
           <div class="notification menu-notification">3</div>
         </ons-list-item>
 
         
 
-        <ons-list-item >
-          <a href="logout">ออกจากระบบ</a>
-        </ons-list-item>
+       <ons-list class="bottom-menu-list">
+        <ons-list-item class="bottom-menu-item" ng-click="menuGotoPage('logout')" style="color: #FFF;">
+			<ons-icon icon="fa-ban"></ons-icon>
+			ออกจากระบบ
+		</ons-list-item>
+	</ons-list>
       </ons-list>
     </ons-page>

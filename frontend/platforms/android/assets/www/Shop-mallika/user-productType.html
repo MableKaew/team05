@@ -27,10 +27,11 @@
   
    
       <ons-list style="margin: 15px;" >
-      <ons-list-item>
-     <div class="left"><ons-back-button>Back</ons-back-button></div>
-     </ons-list-item>
-      <ons-list-item class="center">{{products.name}}</ons-list-item>
+     
+      <ons-list-item class="center">{{products.name}}
+      <ons-icon onclick="ModalProduct.hide()"
+						style="float: right; padding: 10px; color: red;" 
+						icon="fa fa-times" size="20px"></ons-icon></ons-list-item>
       
       <ons-list-item modifier="chevron" ng-repeat="d in products['have']">
       		<label ng-click="showProductDetail(d.id)">
@@ -59,10 +60,11 @@
   
    
       <ons-list style="margin: 15px;" >
-       <ons-list-item>
-     <div class="left"><ons-back-button>Back</ons-back-button></div>
-     </ons-list-item>
-      <ons-list-item class="center">{{datas.name}}</ons-list-item>
+     
+      <ons-list-item class="center">{{datas.name}}
+      <ons-icon onclick="ModalDetail.hide()"
+						style="float: right; padding: 10px; color: red;" 
+						icon="fa fa-times" size="20px"></ons-icon></ons-list-item>
       
       <ons-list-item >
       		
