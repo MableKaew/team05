@@ -20,10 +20,10 @@ sys.app.controller('LoginController', function($scope, $http, Auth, $route, $rou
 				
 				if(level == 'ADMIN') {
 					url = baseUrl + '/admin/show/' + id;
-					var path = '/index';
+					var path = '/Admin';
 				} else {
 					url = baseUrl + '/member/show/' + id;
-					var path = '/member';
+					var path = '/index';
 				}
 				
 				$http.get(url).success(function(data) {

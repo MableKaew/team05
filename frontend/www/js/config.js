@@ -26,6 +26,9 @@ sys.app.config(function($sceDelegateProvider, $routeProvider, $locationProvider)
   .when('/member', {
 	   templateUrl: 'page2.html'
    })
+   .when('/Admin', {
+	   templateUrl: 'Shop-Admin/_menu.html'
+   })
    
    .when('/MemberTransferMoney', {
 	   templateUrl: 'Shop-Atikom/index.html'
@@ -48,7 +51,7 @@ sys.app.config(function($sceDelegateProvider, $routeProvider, $locationProvider)
    })
    
      .when('/AdminResultMoney', {
-	   templateUrl: 'Shop-Kamthorn/index.html'
+	   templateUrl: 'Shop-Siraphop/index.html'
    })
    .otherwise({
        redirectTo: '/notfound'
