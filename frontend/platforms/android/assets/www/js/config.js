@@ -15,43 +15,43 @@ sys.app.config(function($sceDelegateProvider, $routeProvider, $locationProvider)
    })
    
     .when('/notfound', {
-	   templateUrl: 'notpage.html'
+	   templateUrl: 'notpage.html',
    })
    
    .when('/user', {
-	   templateUrl: 'shop-user/index.html'
+	   templateUrl: 'shop-user/index.html',
    })
    
    
   .when('/member', {
-	   templateUrl: 'page2.html'
+	   templateUrl: 'page2.html',
    })
    .when('/Admin', {
-	   templateUrl: 'Shop-Admin/_menu.html'
+	   templateUrl: 'Shop-Admin/_menu.html',
    })
    
    .when('/MemberTransferMoney', {
-	   templateUrl: 'Shop-Atikom/index.html'
+	   templateUrl: 'Shop-Atikom/index.html',
    })
    
     .when('/MemberBill', {
-	   templateUrl: 'Shop-Jaris/index.html'
+	   templateUrl: 'Shop-Jaris/index.html',
    })
    
     .when('/AdminManageProduct', {
-	   templateUrl: 'Shop-Kamthorn/index.html'
+	   templateUrl: 'Shop-Kamthorn/index.html',
    })
    
      .when('/MemberSelectProduct', {
-	   templateUrl: 'Shop-mallika/index.html'
+	   templateUrl: 'Shop-mallika/productType.html',
    })
    
      .when('/MemberBasket', {
-	   templateUrl: 'Shop-Santipab/index.html'
+	   templateUrl: 'Shop-Santipab/index.html',
    })
    
      .when('/AdminResultMoney', {
-	   templateUrl: 'Shop-Siraphop/index.html'
+	   templateUrl: 'Shop-Siraphop/index.html',
    })
    .otherwise({
        redirectTo: '/notfound'
