@@ -9,4 +9,18 @@ sys.app.controller('ViewProductController',function($scope, $http, Shared){
 		});
 		//ModalDetail.show();
 	}
+	
+	$scope.showProductAll = function(id){
+		
+		var Productype = Shared.getProductypes();
+		var subUrl='/productype/show/'+Productype.id;
+		
+		$http.get(baseUrl + subUrl).success(function(data){
+			$scope.products=data;
+			
+			
+		});
+	}
+	$scope.showProductAll();
+	
 });
