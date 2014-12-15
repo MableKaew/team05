@@ -1,16 +1,17 @@
 <meta charset="utf-8">
+
 <ons-navigator title="Navigator" var="myNavigator">
- <ons-page ng-controller ="MenuController">
+ <ons-page >
       <ons-toolbar > <div class="center">ระบบสั่งซื้อสินค้าออนไลน์</div></ons-toolbar>
 
       <ons-list >
       <ons-list-header><div class="center">เมนูผู้ดูแลระบบ</div></ons-list-header>
-        <ons-list-item  modifier="chevron" onclick="menuGotoPage('AdminManageProduct')">
+        <ons-list-item  modifier="chevron" onclick="myNavigator.pushPage('Shop-Kamthorn/index.html', { animation : 'slide' } )">
           <ons-icon icon="fa-plus"></ons-icon>
           จัดการสินค้า
         </ons-list-item>
 
-        <ons-list-item  modifier="chevron" onclick="menuGotoPage('AdminResultMoney')">
+        <ons-list-item  modifier="chevron" onclick="myNavigator.pushPage('Shop-Atikom/index.html', { animation : 'slide' } )">
           <ons-icon icon="fa-bookmark"></ons-icon>
           
          ประวัติการซื้อขาย
