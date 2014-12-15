@@ -1,4 +1,4 @@
-<meta charset="utf-8">
+﻿<meta charset="utf-8">
 <ons-navigator title="Navigator" var="myNavigator">
  <ons-page ng-controller ="MenuController">
       <ons-toolbar > <div class="center">ระบบสั่งซื้อสินค้าออนไลน์</div></ons-toolbar>
@@ -22,7 +22,13 @@
            <div class="notification menu-notification">3</div>
         </ons-list-item>
 
-   
+    <ons-list-item  modifier="chevron" onclick="myNavigator.pushPage('Shop-Atikom/page5.html')">
+          <ons-icon icon="fa-bookmark"></ons-icon>
+          
+         ประวัติผลการโอนเงิน
+           <div class="notification menu-notification">8</div>
+        </ons-list-item>
+
         <ons-list-item  modifier="chevron" >
           <a href="logout">ออกจากระบบ</a>
         </ons-list-item>
