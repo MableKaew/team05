@@ -12,4 +12,9 @@ sys.app.controller('MenuController', function($scope, $http, $location, Auth) {
 		menu.closeMenu();
 	} 
 	
+	$scope.menuAdminGotoPage = function(url) {
+		$location.path('/' + url);
+		
+	} 
+	
 });
