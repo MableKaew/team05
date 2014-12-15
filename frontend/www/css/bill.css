@@ -1,0 +1,26 @@
+.bill-form {
+  text-align: center;
+  width: 80%;
+  margin: 60px auto 0;
+}
+
+input[type=nameReceive], input[type=address], input[type=district], input[type=province], input[type=postCode], input[type=tel] {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  outline: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.Next-button {
+  width: 100%;
+  margin: 0 auto;
+  vertical-align: middle; 
+}
+
+.Back-button {
+  display: block;
+  margin: 8px auto 0 auto;
+  font-size: 14px;
+}
