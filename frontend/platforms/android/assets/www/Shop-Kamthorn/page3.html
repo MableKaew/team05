@@ -1,0 +1,31 @@
+ <meta charset="utf-8">
+ <ons-navigator title="Navigator" var="myNavigator">
+ <ons-page>
+     <ons-toolbar>
+     <div class="left">
+       <ons-toolbar-button>
+    	<ons-back-button onclick="myNavigator.pushPage('Shop-Kamthorn/page2.html', { animation : 'slide'})">Back
+    	</ons-back-button>
+          </ons-toolbar-button>
+          </div>
+     
+     <div class="right">
+          <ons-toolbar-button onclick="myNavigator.pushPage('Shop-Kamthorn/page2.html', { animation : 'slide'})" class="toolbar-button--quiet navigation-bar__line-height">
+      <i class="ion-android-star" style="font-size:20px;"></i>เสร็จสิ้น
+          </ons-toolbar-button>
+        </div>
+		
+		<div class="center">
+			เพิ่มประเภทสินค้า
+		</div>
+	</ons-toolbar>
+
+   
+	<div class="login-form" ng-show='!checkLogin'>
+	 <input ng-model="typeName" type="text" class="text-input--underbar" placeholder="ชื่อประเภทสินค้า" style="margin-top:8px; width: 100%;">
+    
+        <input ng-model="detail" type="text" class="text-input--underbar" placeholder="ข้อมูลทั่วไป" style="margin-top:8px; width: 100%;">
+   
+	</div>
+</ons-page>
+</ons-navigator>

@@ -1,0 +1,73 @@
+ <meta charset="utf-8">
+ <ons-navigator title="Navigator" var="myNavigator">
+ <ons-page>
+      <ons-toolbar>
+        <div class="left">
+       <ons-toolbar-button>
+    	<ons-back-button onclick="myNavigator.pushPage('Shop-Kamthorn/index.html', { animation : 'slide'})">Back
+    	</ons-back-button>
+          </ons-toolbar-button>
+          </div>
+          
+          
+        
+        <div class="center">จัดการประเภทสินค้า</div>
+      </ons-toolbar>
+     
+ 
+      
+<ons-list>
+        <ons-list-item modifier="tappable">
+          <label class="checkbox checkbox--noborder checkbox--list-item">
+            <input type="checkbox">
+            <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+          	  อุปกรณ์ IT
+          </label>
+        </ons-list-item>
+        
+        <ons-list-item modifier="tappable">
+          <label class="checkbox checkbox--noborder checkbox--list-item">
+            <input type="checkbox">
+            <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+            computer
+          </label>
+        </ons-list-item>
+        
+        <ons-list-item modifier="tappable">
+          <label class="checkbox checkbox--noborder checkbox--list-item">
+            <input type="checkbox">
+            <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+         	 จักรยาน
+          </label>
+        </ons-list-item>
+        
+         <ons-list-item modifier="tappable">
+          <label class="checkbox checkbox--noborder checkbox--list-item">
+            <input type="checkbox">
+            <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+         	เครื่องดนตรี
+          </label>
+        </ons-list-item>
+  </ons-list>
+  
+        <br><br>
+        <ons-list-item style="padding: 0px">
+        <ons-button  onclick="myNavigator.pushPage('Shop-Kamthorn/page3.html', { animation : 'slide'})" modifier="large" class="add-button">
+       		 เพิ่มประเภทสินค้า
+        </ons-button>
+        </ons-list-item> 
+        
+	<ons-list-item style="padding: 0px">
+        <ons-button  modifier="large" class="delete-button">
+       		 ลบประเภทสินค้า
+        </ons-button>
+     </ons-list-item>
+     
+     <ons-list-item style="padding: 0px">
+        <ons-button  onclick="myNavigator.pushPage('Shop-Admin/_menu.html', { animation : 'slide'})" modifier="large" class="add-button">
+       		กลับเมนูหลัก
+        </ons-button>
+        </ons-list-item> 
+	
+    </ons-page>
+    </ons-navigator>
