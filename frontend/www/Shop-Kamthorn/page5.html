@@ -1,0 +1,58 @@
+ <meta charset="utf-8">
+ 
+ <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="menu.toggle()">
+            <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="right">
+          <ons-toolbar-button ng-click="menu.setMainPage('Shop-Kamthorn/page6.html')">บันทึก
+          </ons-toolbar-button>
+        </div>
+		
+        <div class="center">เลือกประเภทสินค้า</div>
+      </ons-toolbar>
+      
+	<div class="left">
+		<button class="button button--light" ng-click="menu.setMainPage('Shop-Kamthorn/page4.html')">กลับ</button>
+    </div>
+	   
+      
+<ons-list>
+        <ons-list-item modifier="tappable">
+          <label class="checkbox checkbox--noborder checkbox--list-item">
+            <input type="checkbox">
+            <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+          	  อุปกรณ์ IT
+          </label>
+        </ons-list-item>
+        
+        <ons-list-item modifier="tappable">
+          <label class="checkbox checkbox--noborder checkbox--list-item">
+            <input type="checkbox">
+            <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+            computer
+          </label>
+        </ons-list-item>
+        
+        <ons-list-item modifier="tappable">
+          <label class="checkbox checkbox--noborder checkbox--list-item">
+            <input type="checkbox">
+            <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+         	 จักรยาน
+          </label>
+        </ons-list-item>
+        
+        <ons-list-item modifier="tappable">
+          <label class="checkbox checkbox--noborder checkbox--list-item">
+            <input type="checkbox">
+            <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+         	เครื่องดนตรี
+          </label>
+        </ons-list-item>
+  </ons-list>
+  
+        	
+    </ons-page>

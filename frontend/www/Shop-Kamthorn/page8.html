@@ -1,0 +1,194 @@
+ <meta charset="utf-8">
+ <ons-navigator title="Navigator" var="myNavigator">
+ <ons-page>
+     <ons-toolbar>
+        <div class="left">
+       <ons-toolbar-button>
+    	<ons-back-button onclick="myNavigator.pushPage('Shop-Kamthorn/index.html', { animation : 'slide'})">Back
+    	</ons-back-button>
+          </ons-toolbar-button>
+          </div>
+          <div class="right">
+            <ons-toolbar-button>
+              <ons-icon icon="ion-plus" fixed-width="false" style="vertical-align: -4px;" ng-click="menu.setMainPage('Shop-Kamthorn/page4.html')">เพิ่ม</ons-icon>
+            </ons-toolbar-button>
+          </div>
+          
+          <div class="center">แสดงสินค้า</div>
+     </ons-toolbar>
+        
+
+  <ons-list>
+
+     <ons-list-item modifier="tappable"> 
+     <label class="checkbox checkbox--list-item">
+            <input type="checkbox">
+            <div class="checkbox__checkmark checkbox--list-item__checkmark"></div>
+          </label>
+      <ons-row ng-click="menu.setMainPage('Shop-Kamthorn/page7.html')">
+            <ons-col width="95px">
+              <img src="http://p3.isanook.com/hi/0/wb/i/ud/214/1072246/canon_eos_5d_mark.jpg;r:width=135,height=80;static:p_s1sf_hi_0;file:73cca3.jpg" class="thumbnail">
+            </ons-col>
+            <ons-col>
+              <div class="name">
+                กล้องcanon EOS-7D
+              </div>
+              <div class="price">
+                <i class="fa fa-map-marker"></i> ราคา:19000 บาท
+              </div>
+              <div class="amount">
+                จำนวน:10 ชิ้น
+              </div>
+            </ons-col>
+            <ons-col width="40px"></ons-col>
+          </ons-row>
+     </ons-list-item>
+        
+        <ons-list-item modifier="tappable"> 
+     <label class="checkbox checkbox--list-item">
+            <input type="checkbox">
+            <div class="checkbox__checkmark checkbox--list-item__checkmark"></div>
+          </label>
+          <ons-row ng-click="menu.setMainPage('Shop-Kamthorn/page7.html')">
+            <ons-col width="95px">
+              <img src="http://p3.isanook.com/hi/0/wb/i/ud/214/1072246/canon_eos_5d_mark.jpg;r:width=135,height=80;static:p_s1sf_hi_0;file:73cca3.jpg" class="thumbnail">
+            </ons-col>
+            <ons-col>
+              <div class="name">
+                กล้องcanon EOS-7D
+              </div>
+              <div class="price">
+                <i class="fa fa-map-marker"></i> ราคา:19000 บาท
+              </div>
+              <div class="amount">
+                จำนวน:10 ชิ้น
+              </div>
+            </ons-col>
+            <ons-col width="40px"></ons-col>
+          </ons-row>
+         
+        </ons-list-item>
+        
+        
+    <ons-list-item modifier="tappable">
+      
+          <ons-row>
+            <ons-col width="95px">
+              <img src="http://www.beautybyherb.com/image/cache/data/bbhimages/Products/Body%20Care/body%20treatment/AHA-Fruity-Body-Treatment-80x80.jpg" class="thumbnail">
+            </ons-col>
+            <ons-col>
+              <div class="name">
+                อาม่าโลชั่น
+              </div>
+              <div class="price">
+                <i class="fa fa-map-marker"></i> ราคา:50 บาท
+              </div>
+              <div class="amount">
+                จำนวน:100 ชิ้น
+              </div>
+            </ons-col>
+            <ons-col width="40px"></ons-col>
+          </ons-row>
+          
+          <ons-list-item modifier="chevron" ng-repeat="d in products['have']">
+      		<label ng-click="showProductDetail(d.id)">
+      		<row>
+      		{{d.name}}
+      		</row>
+      		
+      		<row>
+      		{{d.price}}
+      		</row>
+      		<row>
+      		จำนวนสินค้า :{{d.amount}}
+      		</row>
+      		
+      		</label>
+      </ons-list-item>
+      
+      <label ng-click="showProduct(productType.id,productType.have)">
+      		{{productType.have}}
+      		
+      		
+      		</label>
+      		
+      </ons-list-item>
+        
+        <ons-list-item modifier="tappable" ng-click="menu.setMainPage('Shop-Kamthorn/page7.html')">
+     
+          <ons-row>
+            <ons-col width="95px">
+              <img src="http://www.beautybyherb.com/image/cache/data/bbhimages/Products/Body%20Care/body%20treatment/AHA-Fruity-Body-Treatment-80x80.jpg" class="thumbnail">
+            </ons-col>
+            <ons-col>
+              <div class="name">
+                อาม่าโลชั่น
+              </div>
+              <div class="price">
+                <i class="fa fa-map-marker"></i> ราคา:50 บาท
+              </div>
+              <div class="amount">
+                จำนวน:100 ชิ้น
+              </div>
+            </ons-col>
+            <ons-col width="40px"></ons-col>
+          </ons-row>
+        </ons-list-item>
+        
+  
+  <ons-list-item modifier="tappable" ng-click="menu.setMainPage('Shop-Kamthorn/page7.html')">
+     
+          <ons-row>
+            <ons-col width="95px">
+              <img src="http://www.tohome.com/images/imageproduct/500/19092013/ASTON-560-1.jpg" width="95" height="95" class="thumbnail">
+            </ons-col>
+            <ons-col>
+              <div class="name">
+                  เครื่องนำทาง จีพีเอส GPS 
+              </div>
+              <div class="price">
+                <i class="fa fa-map-marker"></i> ราคา:3790 บาท
+              </div>
+              <div class="amount">
+                จำนวน:20 ชิ้น
+              </div>
+            </ons-col>
+            <ons-col width="40px"></ons-col>
+          </ons-row>
+        </ons-list-item>
+        
+        <ons-list-item modifier="tappable"ng-click="menu.setMainPage('Shop-Kamthorn/page7.html')">
+      <ons-row>
+            <ons-col width="95px">
+              <img src="http://www.tohome.com/images/imageproduct/500/19092013/ASTON-560-1.jpg" width="95" height="95" class="thumbnail">
+            </ons-col>
+            <ons-col>
+              <div class="name">
+                  เครื่องนำทาง จีพีเอส GPS 
+              </div>
+              <div class="price">
+                <i class="fa fa-map-marker"></i> ราคา:3790 บาท
+              </div>
+              <div class="amount">
+                จำนวน:20 ชิ้น
+              </div>
+            </ons-col>
+            <ons-col width="40px"></ons-col>
+          </ons-row>
+        </ons-list-item>
+    </ons-list>
+
+ </ons-page>
+  </ons-navigator>
+        <div class="bottom-bar">
+  <ons-list-item style="padding: 0px">
+        <ons-button  modifier="large" class="add-button">
+       		ลบสินค้า
+        </ons-button>
+        </ons-list-item> 
+        
+</div>
+     
+        
+        
+
