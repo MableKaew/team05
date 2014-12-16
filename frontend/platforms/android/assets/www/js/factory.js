@@ -21,6 +21,8 @@ sys.app.factory('Shared', function() {
 	var edituser = {};
 	var datas = {};
 	var baseUrl = 'http://localhost:8080';
+	var productypes= 1;
+	var products= {};
 	
 	return {
 		getId: function() {
@@ -49,6 +51,18 @@ sys.app.factory('Shared', function() {
 		},
 		setMemberId: function(id) {
 			memberId = id;
+		},
+		getProductypes: function() {
+			return productypes;
+		},
+		setProductypes: function(Productype) {
+			productypes = Productype;
+		},
+		getProducts: function() {
+			return products;
+		},
+		setProducts: function(Product) {
+			products = Product;
 		}
 	};
 	
