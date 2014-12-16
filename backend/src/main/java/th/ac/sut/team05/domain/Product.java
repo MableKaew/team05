@@ -33,6 +33,9 @@ public class Product {
 	@Column
 	private int discount;
 
+	@Column
+	private int normalprice;
+
 	public Long getId() {
 		return id;
 	}
@@ -96,4 +99,15 @@ public class Product {
 	public void setDiscount(int discount) {
 		this.discount = discount;
 	}
+
+	public int getNormalprice() {
+		return normalprice;
+	}
+
+	public void setNormalprice(int normalprice) {
+		this.normalprice = normalprice;
+	}
+	
+	
+	
 }
