@@ -1,5 +1,7 @@
 <meta charset="utf-8">
 
+<ons-navigator title="Navigator" var="myNavigator">
+
 <ons-page ng-controller="MenuController">
       <ons-toolbar>
         <div class="left">
@@ -7,48 +9,23 @@
             <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
           </ons-toolbar-button>
         </div>
-        <div class="right">
-        	<ons-toolbar-button ng-click="GotoPage('Shop-Atikom/page2.html')">ต่อไป
+        
         	
-        		
-        	
-        	
-        	
-        	 
-        	</ons-toolbar-button>
-        </div>
+        
         
        <div class="center">โอนเงิน</div>   
       </ons-toolbar>
    
-  	<div class="formarea">
-        <div class="form-row">
-          <input type="text" class="text-input--underbar width-full" placeholder="หมายเลขใบสั่งซื้อ" value="">
-          </div>
-<br>
-        <div class="form-row">
-          <input type="text" class="text-input--underbar width-full" placeholder="ชื่อลูกค้า" value="">
-          </div>
-<br>          
-         <div class="form-row">
-          <input type="text" class="text-input--underbar width-full" placeholder="วัน-เวลาทำการโอน" value="">
-          </div>
-<br>          
-         <div class="form-row">
-          <input type="text" class="text-input--underbar width-full" placeholder="ยอดเงินทำการโอน" value="">
-          </div>
-<br>          
-         <div class="form-row">
-          <input type="text" class="text-input--underbar width-full" placeholder="อัพรูปใบเสร็จรับเงิน (ถ้ามี)" value="">
-          
-          <button class="button">อัพรูปบิล
-          
-          </button>
-          </div>
-<br>
-        
-      </div>
-    
-      
+   <ul class="list">
+  <li class="list__item list__item--chevron" ng-click="myNavigator.pushPage('Shop-Atikom/index.html')">
+    แจ้งผลการโอนเงิน
+  </li>
+  <li class="list__item list__item--chevron" ng-click="myNavigator.pushPage('Shop-Atikom/page3.html')">
+    ประวัติผลการโอนเงิน
+  </li>
+</ul>
+   
+   
       
     </ons-page>
+    </ons-navigator>
