@@ -6,27 +6,55 @@
         
           <ons-back-button> ย้อนกลับ     </ons-back-button>
         </div>
-        <div class="center">product</div>
+        <div class="center">สินค้า</div>
+        <br>
    </ons-toolbar>
  <ons-list style="margin: auto 0px auto 0px;" >
      
       
-      
-      <ons-list-item modifier="chevron" ng-repeat="d in products['have']">
+
+    <ons-list-item modifier="chevron" ng-repeat="d in products['have']">
+      <br>
       		<label ng-click="showProductDetail(d.id)">
-      		<row>
-      		{{d.name}}
-      		</row>
       		
-      		<row>
-      		{{d.price}}
-      		</row>
-      		<row>
-      		จำนวนสินค้า :{{d.amount}}
-      		</row>
       		
-      		</label>
+  
+    <ons-row>
+            <ons-col width="95px">
+              <img src="{{d.picture}}" width="95" height="95" class="thumbnail2">
+          
+            </ons-col>
+            
+            <ons-col>
+            
+            
+          
+     
+      
+              <div class="name2">
+                {{d.name}}
+              </div>
+              
+              <div class="location2">
+                <i class="fa fa-map-marker"></i> ราคาขาย :	{{d.price}}  บาท  
+              </div>
+              <div class="location2">
+                <i class="fa fa-map-marker"></i> จำนวน :	{{d.amount}}  ชิ้น  
+              </div>
+              
+              <div class="desc2">
+              รายละเอียด.. 
+               
+              </div>
+            </ons-col>
+            <ons-col width="40px"></ons-col>
+          </ons-row>
+          
+          </label>
+          
       </ons-list-item>
       
+       
       </ons-list>
   </ons-page>
+  

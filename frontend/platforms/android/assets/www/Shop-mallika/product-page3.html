@@ -3,32 +3,66 @@
    
    <ons-toolbar>
          <div class="left">
-        
           <ons-back-button >ย้อนกลับ </ons-back-button>
+        </div>
+        
+         <div class="center">รายละเอียดสินค้า</div>
+         <div class="right">
+          <ons-button >หยิบใส่ตะกร้า </ons-button>
+          <br>
         </div>
         <div class="center">{{Product.name}}</div>
    </ons-toolbar>
- <ons-list style="margin: auto 0px auto 0px;" >
+
      
       
+   				<div class="center">
+            <ons-row   width="250px">
+              <img src="{{datas.picture}}" width="250" height="250" class="center">
+          
+             </ons-row>
+            
+            </div>
+        
+            
       
-      <ons-list-item>
-      		
-      		
-      		{{datas.name}}
-      		
-      		</ons-list-item>
-      		<ons-list-item>
-      		
-      		{{datas.price}}
-      		</ons-list-item>
-      		<ons-list-item>
-      		
-      		จำนวนสินค้า :{{datas.amount}}
-      		
-      		
-      		
-      </ons-list-item>
+              <div class="name">
+              {{datas.name}}
+              </div>
+                <br>
+              <div class="location">
+                <i class="fa fa-map-marker"></i> ราคาขาย :	{{datas.price}} บาท  
+              </div>
+           
+              <div class="location">
+                <i class="fa fa-map-marker"></i> ราคาปรกคิ :	<strike>{{datas.price}}</strike> บาท 
+              </div>
+              
+               <div class="location">
+                <i class="fa fa-map-marker"></i> ประหยัดทันที :	{{datas.discount}} บาท 
+              </div>
+              
+              <div class="location">
+                <i class="fa fa-map-marker"></i> สินค้ามีจำนวน :	{{datas.amount}}  ชิ้น  
+              </div>
+              
+                <br>
+              <div class="desc">
+                      รายละเอียด :
+       {{datas.detail}}
+               
+              </div>
+            
+            
+            <ons-col width="40px"></ons-col>
+          
       
-      </ons-list>
+     
+     
+     
+     
   </ons-page>
+  
+  
+  
+  
