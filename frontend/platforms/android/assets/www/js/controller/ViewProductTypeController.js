@@ -7,6 +7,8 @@ sys.app.controller('ViewProductTypeController',function($scope, $http, Shared){
 		});
 	}
 	$scope.showProductTypeAll();
+	
+	///////////////////////model
 	$scope.showProduct = function(id,have){
 		var subUrl='/productype/show/'+id;
 		$http.get(baseUrl + subUrl).success(function(data){
@@ -22,4 +24,13 @@ sys.app.controller('ViewProductTypeController',function($scope, $http, Shared){
 		});
 		ModalDetail.show();
 	}
+	/////////////////////////////page
+	
+	$scope.show__Product = function(id){
+		Shared.setProductypes(id);
+		MainNavigator.pushPage( 'Shop-mallika/product-page2.html', { animation : 'slide' } );
+
+	}
+	
+	
 });

@@ -43,7 +43,7 @@ sys.app.config(function($sceDelegateProvider, $routeProvider, $locationProvider)
    })
    
      .when('/MemberSelectProduct', {
-	   templateUrl: 'Shop-mallika/productType.html',
+	   templateUrl: 'Shop-mallika/product-page1.html',
    })
    
      .when('/MemberBasket', {

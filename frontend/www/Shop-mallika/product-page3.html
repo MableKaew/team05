@@ -1,0 +1,34 @@
+ <meta charset="UTF-8">
+ <ons-page ng-controller="ViewDetailProductCTRL">
+   
+   <ons-toolbar>
+         <div class="left">
+        
+          <ons-back-button >ย้อนกลับ </ons-back-button>
+        </div>
+        <div class="center">{{Product.name}}</div>
+   </ons-toolbar>
+ <ons-list style="margin: auto 0px auto 0px;" >
+     
+      
+      
+      <ons-list-item>
+      		
+      		
+      		{{datas.name}}
+      		
+      		</ons-list-item>
+      		<ons-list-item>
+      		
+      		{{datas.price}}
+      		</ons-list-item>
+      		<ons-list-item>
+      		
+      		จำนวนสินค้า :{{datas.amount}}
+      		
+      		
+      		
+      </ons-list-item>
+      
+      </ons-list>
+  </ons-page>
