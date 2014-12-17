@@ -2,7 +2,7 @@
 <ons-navigator title="Navigator" var="myNavigator">
       <ons-toolbar>
         <div class="left">
-          <ons-back-button onclick="myNavigator.pushPage('Shop-Siraphop/orderconfirm.html', { animation : 'slide' } )">Back</ons-back-button>
+          <ons-back-button onclick="myNavigator.pushPage('Shop-Siraphop/orderconfirm.html')">Back</ons-back-button>
         </div>
         <div class="center">อนุมัติการสั่งซื้อ</div>
       </ons-toolbar>
@@ -11,8 +11,8 @@
       
       <br></br><br></br><br></br><br></br><br></br>
       
-      <ons-button modifier="large--cta" ng-click="menu.setMainPage('Shop-Siraphop/orderconfirm.html', {closeMenu: true})">Confirm</ons-button>
-      <ons-button modifier="large" ng-click="menu.setMainPage('Shop-Siraphop/orderconfirm.html', {closeMenu: true})">Decline</ons-button>
+      <ons-button modifier="large--cta" onclick="myNavigator.pushPage('Shop-Siraphop/orderconfirm.html')">Confirm</ons-button>
+      <ons-button modifier="large" onclick="myNavigator.pushPage('Shop-Siraphop/orderconfirm.html')">Decline</ons-button>
       
       
 </ons-navigator>
