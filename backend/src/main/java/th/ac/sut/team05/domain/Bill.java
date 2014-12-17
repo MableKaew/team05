@@ -38,6 +38,9 @@ public class Bill {
 	private int netPrice;
 	@Temporal(TemporalType.TIMESTAMP)
     private Date dateTime;
+	
+	
+	
 	public Long getId() {
 		return id;
 	}

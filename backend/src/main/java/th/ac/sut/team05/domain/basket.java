@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class basket {
@@ -23,6 +24,21 @@ public class basket {
 	@Column
 	private String datetime;
 	
+	
+	
+	@OneToMany
+	private Collection<Product> containProduct;
+	
+	
+
+	public Collection<Product> getContainProduct() {
+		return containProduct;
+	}
+
+	public void setContainProduct(Collection<Product> containProduct) {
+		this.containProduct = containProduct;
+	}
+
 	public Long getId() {
 		return id;
 	}
