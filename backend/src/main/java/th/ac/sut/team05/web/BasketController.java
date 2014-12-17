@@ -1,5 +1,7 @@
 package th.ac.sut.team05.web;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,14 +12,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import th.ac.sut.team05.domain.basket;
-
 import th.ac.sut.team05.repository.BasketRepository;
+import th.ac.sut.team05.repository.ProductRepository;
 
 
 @RestController
 public class BasketController {
 @Autowired
 private BasketRepository  basketRepo;
+@Autowired
+private ProductRepository  productRepo;
 
 /*-------------ADMIN MANAGE------------*/
 @RequestMapping("/basket/add")
@@ -33,6 +37,16 @@ public String deleteAdmin(@PathVariable("id") Long id){
 	basketRepo.delete(id);
 	return "ź�����";
 }
+
+
+
+@RequestMapping("/saveBasket/{arrProduct}/add")
+	@ResponseBody
+	public String add(@PathVariable("arrProduct")List<Long> arrProduct, @Valid @RequestBody basket basket){
+		basket.setContainProduct(productRepo.findByIdIn(arrProduct));
+		basketRepo.save(basket);
+		return "Basket Complete";
+	}
 
 
 }
