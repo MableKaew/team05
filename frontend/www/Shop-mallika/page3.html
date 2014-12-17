@@ -1,97 +1,70 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-
-  
-    <script>
-      ons.bootstrap();
-    </script>
-
-  </head>
-  <body>
-
-    <ons-tabbar>
-      <ons-tab page="timeline.html" active="true">
+<!-- ใช้กับผู้ใช้ทั่วไป -->
+ <meta charset="UTF-8">
+ <ons-page ng-controller="UserViewDetailProductCTRL">
+   
+   <ons-toolbar>
+         <div class="left">
+          <ons-back-button >ย้อนกลับ </ons-back-button>
+        </div>
         
-      </ons-tab>
-      <ons-tab page="timeline.html">
-        
-       
-      </ons-tab>
-      <ons-tab page="timeline.html">
-        
-      </ons-tab>
-      <ons-tab page="timeline.html">
-       
-      </ons-tab>
-    </ons-tabbar>
-
-    <ons-template id="timeline.html">
-      <ons-page>
-        <ons-toolbar>
-          <div class="left">
-            <ons-toolbar-button>
-              <ons-icon icon="ion-compose" fixed-width="false" style="font-size: 26px; vertical-align: -4px"ng-click="menu.setMainPage('Shop-Santipab/index.html', {closeMenu: true})"></ons-icon>
-            </ons-toolbar-button>
-          </div>
-          <div class="center">
-            รายละเอียดสินค้า 
-          </div>
+         <div class="center">รายละเอียดสินค้า</div>
           <div class="right">
-            <ons-toolbar-button>
-              <ons-icon icon="ion-ios7-search-strong" fixed-width="false" style="font-size: 26px; vertical-align: -4px;"></ons-icon>
-            </ons-toolbar-button>
-          </div>
-        </ons-toolbar>
+          <ons-button onclick="loginNavigator.pushPage( '_login.html', { animation : 'fade' } )">login </ons-button>
+          <br>
+        </div>
+        
+        <div class="center">{{Product.name}}</div>
+   </ons-toolbar>
 
-
-
-
-       <ons-list-item modifier="inset" class="timeline">
-         <center>
-          <ons-row> 
-            <ons-col width="230px">
-             
-              <img src="http://www.tohome.com/images/imageproduct/500/19092013/ASTON-560-1.jpg" width="230" height="230" class="thumbnail">
-              
-            </ons-col>
-            </center>
-            <ons-col>
+     
+      
+   				<div class="center">
+            <ons-row   width="250px">
+              <img src="{{datas.picture}}" width="250" height="250" class="center">
+          
+             </ons-row>
+            
+            </div>
+        
+            
+      
               <div class="name">
-              		  เครื่องนำทาง จีพีเอส GPS  
-             <div class="location">
-                <i class="fa fa-map-marker"></i> ราคา : 3,790  บาท 
+              {{datas.name}}
+              </div>
+                <br>
+              <div class="location">
+                <i class="fa fa-map-marker"></i> ราคาขาย :	{{datas.price}} บาท  
+              </div>
+           
+              <div class="location">
+                <i class="fa fa-map-marker"></i> ราคาปรกคิ :	<strike>{{datas.normalprice}}</strike> บาท 
+              </div>
+              
+               <div class="location">
+                <i class="fa fa-map-marker"></i> ประหยัดทันที :	{{datas.discount}} บาท 
               </div>
               
               <div class="location">
-                <i class="fa fa-map-marker"></i> จำนวนสินค้าในสต๊อกที่มี 20 ชิ้น 
+                <i class="fa fa-map-marker"></i> สินค้ามีจำนวน :	{{datas.amount}}  ชิ้น  
               </div>
               
-              <div class="location">
-                <i class="fa fa-map-marker"></i> ซื้อจำนวน :1 ชิ้น  
-              </div>
-              
+                <br>
               <div class="desc">
-                  แผนที่นำทางที่ได้รับการยอมรับและเชื่อมั่นในตลาดอุปกรณ์นำทางรถยนต์ หรือ GPS มามากกว่า 10 ปี ด้วยคุณสมบัติของแผนที่นำทาง GPS จาก NOSTRA ที่มีความละเอียด และความถูกต้องแม่นยำสูงสุด การันตีโดยผู้นำอุปกรณ์จีพีเอสในตลาดประเทศไทยอย่าง จีพีเอส GARMIN, Kamaz และแบรนด์ชั้นนำอีกหลากหลาย ตลอดจนโปรแกรมแผนที่
+                      รายละเอียด :
+       {{datas.detail}}
+               
               </div>
-            </ons-col>
+            
+            
             <ons-col width="40px"></ons-col>
-          </ons-row>
-        </ons-list-item> 
-        
-        
-        
-        
-        
-        
-        
-        
-
-
-      </ons-page>
-    </ons-template>
-
-  </body>
-</html>
-
+          
+      
+     
+     
+     
+     
+  </ons-page>
+  
+  
+  
+  

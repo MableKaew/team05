@@ -8,7 +8,7 @@ sys.app.controller('ViewProductTypeController',function($scope, $http, Shared){
 	}
 	$scope.showProductTypeAll();
 	
-	///////////////////////model
+	///////////////////////model (ไม่ได้ใช้)
 	$scope.showProduct = function(id,have){
 		var subUrl='/productype/show/'+id;
 		$http.get(baseUrl + subUrl).success(function(data){
@@ -24,7 +24,7 @@ sys.app.controller('ViewProductTypeController',function($scope, $http, Shared){
 		});
 		ModalDetail.show();
 	}
-	/////////////////////////////page
+	/////////////////////////////pageของสมาชิก (ใช้จริง)
 	
 	$scope.show__Product = function(id){
 		Shared.setProductypes(id);
@@ -32,5 +32,6 @@ sys.app.controller('ViewProductTypeController',function($scope, $http, Shared){
 
 	}
 	
+
 	
 });
