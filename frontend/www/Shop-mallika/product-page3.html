@@ -1,5 +1,6 @@
+<!-- ใช้กับสมาชิก -->
  <meta charset="UTF-8">
- <ons-page ng-controller="ViewDetailProductCTRL">
+ <ons-page ng-controller="ViewDetailProductCTRL" >
    
    <ons-toolbar>
          <div class="left">
@@ -8,15 +9,15 @@
         
          <div class="center">รายละเอียดสินค้า</div>
          <div class="right">
-          <ons-button >หยิบใส่ตะกร้า </ons-button>
-          <br>
+          <ons-button> หยิบใส่ตะกร้า   </ons-button>
+          
         </div>
         <div class="center">{{Product.name}}</div>
    </ons-toolbar>
 
      
       
-   				<div class="center">
+   				<div class="center" >
             <ons-row   width="250px">
               <img src="{{datas.picture}}" width="250" height="250" class="center">
           
@@ -24,7 +25,7 @@
             
             </div>
         
-            
+             <div style="margin: auto 0px auto 0px;">
       
               <div class="name">
               {{datas.name}}
@@ -54,9 +55,9 @@
               </div>
             
             
-            <ons-col width="40px"></ons-col>
+           
           
-      
+       </div>
      
      
      

@@ -1,19 +1,20 @@
+<!-- ใช้กับผู้ใช้ทั่วไป -->
 <meta charset="UTF-8">
-<ons-page ng-controller="ViewProductTypeController">
+<ons-page ng-controller="UserViewProductTypeController">
    
-   <ons-toolbar>
+  <ons-toolbar>
         <div class="left">
-          <ons-toolbar-button ng-click="menu.toggle()">
-            <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
-          </ons-toolbar-button>
+        
+          <ons-back-button> ย้อนกลับ     </ons-back-button>
         </div>
         <div class="center">หมวดสินค้า</div>
+        <br>
    </ons-toolbar>
    <div>
       <ons-list style="margin: auto 0px auto 0px;">
       
       <ons-list-item modifier="chevron" ng-repeat="productType in productTypes">
-      		<label ng-click="show__Product(productType.id)">
+      		<label ng-click="showProduct_user(productType.id)">
       		{{productType.name}}
       		
       		
