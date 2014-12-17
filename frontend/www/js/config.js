@@ -31,7 +31,7 @@ sys.app.config(function($sceDelegateProvider, $routeProvider, $locationProvider)
    })
    
    .when('/MemberTransferMoney', {
-	   templateUrl: 'Shop-Atikom/page1.html',
+	   templateUrl: 'Shop-Atikom/index.html',
    })
    
     .when('/MemberBill', {

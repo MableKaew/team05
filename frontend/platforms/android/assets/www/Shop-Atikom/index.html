@@ -5,12 +5,12 @@
 
   <ons-toolbar>
     <div class="left">
-    <ons-back-button onclick="myNavigator.pushPage('Shop-Atikom/page1.html')">Back
     
+    <ons-toolbar-button ng-click="menu.toggle()">
+            <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+          </ons-toolbar-button>
     
-    
-    
-    </ons-back-button></div>
+    </div>
     <div class="center">แจ้งผลการโอนเงิน</div>
     <div class="right">
         	<ons-toolbar-button onclick="myNavigator.pushPage('Shop-Atikom/page2.html')">ต่อไป
@@ -38,14 +38,19 @@
 <br>          
          <div class="form-row">
           <input type="text" class="text-input--underbar width-full" placeholder="อัพรูปใบเสร็จรับเงิน (ถ้ามี)" value="">
+<br>
+<br>          
+            <button class="button button--large" onclick="myNavigator.pushPage('Shop-Atikom/page3.html')">ประวัติผลการโอนเงิน</button>
           
-          <button class="button">อัพรูปบิล
           
-          </button>
           </div>
 <br>
         
       </div>
+<br>      
+       
+
+<br>
     
  
 </ons-page>
