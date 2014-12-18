@@ -22,7 +22,7 @@ public class ViewProductController {
    
    @RequestMapping("/productType/showall")
    @ResponseBody
-   public List<ProductType> showProductAll(){
+   public List<ProductType> showProductTypeAll(){
 	   return (List<ProductType>) productTypeRepo.findAll();
    }
    @RequestMapping("/productype/show/{id}")
@@ -36,6 +36,10 @@ public class ViewProductController {
    public Product showProductId(@PathVariable("id") Long id){
 	   return productRepo.findOne(id);
    }
-   
+   @RequestMapping("/product/showall")
+   @ResponseBody
+   public List<Product> AllshowProduct(){
+	   return (List<Product>) productRepo.findAll();
+   }
    
 }

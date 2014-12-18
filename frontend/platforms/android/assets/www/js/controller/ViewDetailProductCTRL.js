@@ -5,7 +5,7 @@ sys.app.controller('ViewDetailProductCTRL',function($scope, $http, Shared){
 	
 	
 	
-$scope.showProductDetailAll = function(id){
+$scope.showProductDetailAll = function(){
 	var Product = Shared.getProducts();
 		var subUrl='/product/show/'+Product;
 		

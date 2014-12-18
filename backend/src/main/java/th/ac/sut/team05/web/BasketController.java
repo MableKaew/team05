@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import th.ac.sut.team05.domain.Product;
 import th.ac.sut.team05.domain.basket;
 import th.ac.sut.team05.repository.BasketRepository;
 import th.ac.sut.team05.repository.ProductRepository;
@@ -47,6 +48,17 @@ public String deleteAdmin(@PathVariable("id") Long id){
 		basketRepo.save(basket);
 		return "Basket Complete";
 	}
+@RequestMapping("/product/select/{arr}")
+@ResponseBody
+public List<Product> xxxx(@PathVariable("arr")List<Long> arr){
+	return (List<Product>) productRepo.findByIdIn(arr);
+}
 
+@RequestMapping("/basket/ShowAll")
+@ResponseBody
+public List<basket> Showbill(){
+	
+	return ( List<basket>) basketRepo.findAll();
+}
 
 }
