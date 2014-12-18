@@ -1,16 +1,25 @@
 <meta charset="utf-8">
-<ons-navigator title="Navigator" var="meNavigator">
-<ons-page>
+<ons-page ng-controller="ManageBillController">
   <ons-toolbar>
-    <div class="left" ng-click="meNavigator.pushPage('Shop-Jaris/index.html')"><ons-back-button>Back</ons-back-button></div>
-    <div class="center">Delivery Type</div>
-    <div class="right">Label</div>
+    <div class="left" ng-click="MainNavigator.pushPage('Shop-Jaris/page1.html')"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">Detail</div>
+    <div class="right"><ons-toolbar-button  ng-click="meNavigator.pushPage('../index.html')">Next</ons-toolbar-button></div>
   </ons-toolbar>
 
-	<br><br><br><br><br><br><br>
-	<ons-button style="height:200px" input type="deliveryType" value="registered" modifier="large" class="Next-button" ng-click="meNavigator.pushPage('Shop-Jaris/page3.html')"><font size = "20">Registered </font></ons-button>
-	<br><br><br>
-	<ons-button style="height:200px" input type="deliveryType" value="EMS" modifier="large" class="Next-button" ng-click="meNavigator.pushPage('Shop-Jaris/page3.html')"><font size = "20">EMS </font></ons-button>
+<ul class="list">
+  <li class="list__header">
+    สินค้า
+  </li>
+  <li class="list__item">
+    Item
+  </li>
+  <li class="list__header">
+    ข้อมูล
+  </li>
+  <li class="list__item">
+    Item
+  </li>
+</ul>
 
     </ons-page>
       </ons-navigator>

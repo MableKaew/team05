@@ -19,6 +19,7 @@ sys.app.factory('Shared', function() {
 	var memberId = 0;
 	
 	var edituser = {};
+	var editbill = {};
 	var datas = {};
 	var baseUrl = 'http://localhost:8080';
 	var productypes= 1;
@@ -45,6 +46,12 @@ sys.app.factory('Shared', function() {
 		},
 		getEditUser: function() {
 			return edituser;
+		},
+		setEditBill: function(value) {
+			editbill = value;
+		},
+		getEditBill: function() {
+			return editbill;
 		},
 		getMemberId: function() {
 			return memberId;
