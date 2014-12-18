@@ -18,6 +18,7 @@ sys.app.controller('ManageBillController', function($scope, $http, Shared) {
 			
 			$http.post(baseUrl + subUrl, data).success(function(data){
 			alert(data);
+			Shared.setEditBill({});
 			MainNavigator.pushPage("Shop-Jaris/page2.html");
 			});
 		}
