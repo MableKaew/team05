@@ -24,3 +24,10 @@ insert into `product_type_have` (`product_type_id`, `have_id`) values('2','7')
 insert into `admin` (`id`, `email`, `lastname`, `level`, `name`, `pass_word`, `sex`, `tel`, `user_name`) values('1','a@hotmail.com','lookkaew','ADMIN','kaew','1234','MALE','087643','admin')
 ---------Member-------
 insert into `member` (`id`, `email`, `lastname`, `level`, `name`, `pass_word`, `sex`, `tel`, `user_name`, `member_id`) values('1','k@hotmail.com','siri','USER','mallika','4321','MALE','12344','Member','A0')
+------------basket Entity----------
+insert into `basket` (`id`, `amount_buy`, `datetime`, `id_basket`) values('1','2','111213','1')
+---------basket_contain_product-------
+insert into `basket_contain_product` (`basket_id`, `contain_product_id`) values('1','1')
+insert into `basket_contain_product` (`basket_id`, `contain_product_id`) values('1','2')
+insert into `basket_contain_product` (`basket_id`, `contain_product_id`) values('1','3')
+insert into `basket_contain_product` (`basket_id`, `contain_product_id`) values('1','4')

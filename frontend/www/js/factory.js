@@ -73,7 +73,7 @@ sys.app.service('sharedProperties',function(){
 
 	var memberid = 0;
 	var arr = new Array();
-	arr = [0];
+	arr = [];
 	return {
 	
 		getmemberid: function(){

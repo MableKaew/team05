@@ -11,7 +11,7 @@ sys.app.controller('ViewProductController',function($scope, $http, Shared){
 	}
 	
 //////////page ได้ใช้จริง
-$scope.showProductAll = function(id){
+$scope.showProductAll = function(){
 	var Productype = Shared.getProductypes();	
 		var subUrl='/productype/show/'+Productype;
 		

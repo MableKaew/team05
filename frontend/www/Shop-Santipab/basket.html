@@ -1,0 +1,61 @@
+ <meta charset="utf-8">
+<ons-page ng-controller="ManageBasketController">
+   <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="menu.toggle()">
+            <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">ตะกร้าสินค้า</div>
+        
+      </ons-toolbar>
+      <ons-list>
+     
+       <ons-list-item modifier="chevron" ng-repeat="d in ar">
+       <!--  div ng-repeat="d in product[a]"-->
+      <br>
+     <div ng-controller="ViewProductController">
+      		<label ng-click="showProductDetail(product[d-1]['id'])">
+      		
+      		
+  
+    <ons-row>
+            <ons-col width="95px">
+              <img src="{{product[d-1]['picture']}}" width="95" height="95" class="thumbnail2">
+          
+            </ons-col>
+            
+            <ons-col>
+            
+            
+          
+     
+      
+              <div class="name2">
+               {{product[d-1]['name']}}
+              </div>
+              
+              <div class="location2">
+                <i class="fa fa-map-marker"></i> ราคาขาย : {{product[d-1]['price']}}  บาท  
+              </div>
+              <div class="location2">
+                <i class="fa fa-map-marker"></i> จำนวน : {{product[d-1]['amount']}}  ชิ้น  
+              </div>
+              
+              <div class="desc2">
+              รายละเอียด.. 
+               
+              </div>
+            </ons-col>
+            <ons-col width="40px"></ons-col>
+          </ons-row>
+          
+          </label>
+          </div>
+          </div>
+      </ons-list-item>
+      
+      
+      </ons-list>
+      
+      </ons-page>

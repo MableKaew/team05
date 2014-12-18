@@ -47,7 +47,7 @@ sys.app.config(function($sceDelegateProvider, $routeProvider, $locationProvider)
    })
    
      .when('/MemberBasket', {
-	   templateUrl: 'Shop-Santipab/index.html',
+	   templateUrl: 'Shop-Santipab/basket.html',
    })
    
      .when('/AdminResultMoney', {

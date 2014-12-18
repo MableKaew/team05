@@ -8,8 +8,8 @@
         </div>
         
          <div class="center">รายละเอียดสินค้า</div>
-         <div class="right">
-          <ons-button> หยิบใส่ตะกร้า   </ons-button>
+         <div class="right" ng-controller ="ManageBasketController">
+          <ons-button ng-click="setArrProductId(datas.id)"> หยิบใส่ตะกร้า   </ons-button>
           
         </div>
         <div class="center">{{Product.name}}</div>
