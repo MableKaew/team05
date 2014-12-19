@@ -1,4 +1,4 @@
-sys.app.controller('LoginController', function($scope, $http, Auth, $route, $routeParams, $location) {
+sys.app.controller('LoginController', function($scope, $http, Auth, $route, $routeParams, $location, sharedProperties) {
 	
 	var baseUrl = 'http://localhost:8080';
 	
@@ -28,6 +28,7 @@ sys.app.controller('LoginController', function($scope, $http, Auth, $route, $rou
 				
 				$http.get(url).success(function(data) {
 					Auth.setUser(data);
+					sharedProperties.deletearrAll();
 					$location.path(path);
 				});
 				

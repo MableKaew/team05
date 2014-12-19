@@ -81,6 +81,9 @@ sys.app.service('sharedProperties',function(){
 	var memberid = 0;
 	var arr = new Array();
 	arr = [];
+	var arrProduct = new Array();
+	arrProduct = [];
+	
 	return {
 	
 		getmemberid: function(){
@@ -103,6 +106,14 @@ sys.app.service('sharedProperties',function(){
 					arr.splice(index,1);
 				}
 			}
+		},
+		deletearrAll: function(){
+			arr = [];
+		},
+		arrSize: function(){
+			return arr.length;  
 		}
+		
+		
 	};
 });
