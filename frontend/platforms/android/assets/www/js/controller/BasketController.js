@@ -8,6 +8,7 @@ sys.app.controller('ManageBasketController', function($scope, $http, Shared, Aut
 	$scope.setArrProductId = function(productId){
 		//sharedProperties.setMemberId(memberId);
 		sharedProperties.setarr(productId);
+		
 		var a= sharedProperties.getarr();
 		console.log(a);
 		console.log(a[0]);
@@ -68,9 +69,13 @@ $scope.deletearr = function(arrid){
 	}
 
 
-$scope.ShowProductBasket = function(){
+$scope.getProductBasket = function(){
 		var arr = sharedProperties.getarr();
-		var memberId = sharedProperties.getMemberId();
+		//var memberId = sharedProperties.getMemberId();
+		var data = {
+				idBasket: "null",				
+				amountBuy: 0
+		};
 		$http.post('http://localhost:8080/saveBasket/'+arr+'/add',data).success(function(data){
 			alert(data);
 		});
@@ -83,5 +88,22 @@ $scope.showProduct = function(){
 	});
 }
 $scope.showProduct();
+
+//===ทำ icon ลบ แบบ toggle
+$scope.selectDelete = function(){
+	if($scope.checkDelete)
+		$scope.checkDelete= false;
+	else
+		$scope.checkDelete= true;
+}
+//====delete product
+$scope.deleteProduct =function(id){
+	if(confirm('คุณแน่ใจที่จะลบ ?')){
+		sharedProperties.deletearr(id);
+		$scope.ar= sharedProperties.getarr();
+	}
+	var a= sharedProperties.getarr();
+	console.log(a);
+}
 
 });

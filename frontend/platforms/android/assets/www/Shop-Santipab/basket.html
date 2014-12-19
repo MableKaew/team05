@@ -5,17 +5,58 @@
           <ons-toolbar-button ng-click="menu.toggle()">
             <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
           </ons-toolbar-button>
+           
         </div>
-        <div class="center">ตะกร้าสินค้า</div>
-        
+ 		<div class="center">ตะกร้าสินค้า
+         <ons-toolbar-button >
+          <ons-icon ng-if="!checkDelete" icon="fa fa-trash-o" ng-click="selectDelete()"></ons-icon>
+          <a ng-if="checkDelete" ng-click="selectDelete()">  เสร็จสิ้น</a>
+         </ons-toolbar-button>
+        </div>
+        <div class="right">
+          <ons-toolbar-button ng-click="getProductBasket()">
+           สั่งซื้อ
+          </ons-toolbar-button>
+        </div>
       </ons-toolbar>
+      
+      <ons-list>
+        <ons-list-item>
+          <ons-row>
+            <ons-col class="info-col">
+            <div class="info-unit">ราคาเต็ม</div>
+              <div class="info-num">87</div>
+              
+            </ons-col>
+            <ons-col class="info-col">
+            <div class="info-unit">ส่วนลด</div>
+              <div class="info-num">40</div>
+              
+            </ons-col>
+            <ons-col class="info-col">
+              <div class="info-num">ราคาที่ต้องจ่าย</div>
+              <div class="info-unit">100</div>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+      
+      
+      
+      
       <ons-list>
      
        <ons-list-item modifier="chevron" ng-repeat="d in ar">
+      
+       <label ng-show="checkDelete">
+        <ons-icon  icon="fa fa-times" style= "float: right; padding: 10px; color:red;" ng-click="deleteProduct(product[d-1]['id'])"></ons-icon>
+       </label>
+       
        <!--  div ng-repeat="d in product[a]"-->
       <br>
      <div ng-controller="ViewProductController">
-      		<label ng-click="showProductDetail(product[d-1]['id'])">
+      		 <label ng-click="showProductDetail(product[d-1]['id'])"> 
+      	
       		
       		
   
@@ -52,10 +93,13 @@
           
           </label>
           </div>
-          </div>
+         
       </ons-list-item>
       
       
       </ons-list>
       
+  
+      
       </ons-page>
+     

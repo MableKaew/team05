@@ -28,7 +28,7 @@
         <ons-list-item class="menu-item" ng-click="menuGotoPage('MemberBasket')">
       <ons-icon icon="fa-plus"></ons-icon>    
           ตะกร้าสินค้า
-          <div class="notification menu-notification">3</div>
+          <div ng-show="checknotice" class="notification menu-notification" >{{amount}}</div>
         </ons-list-item>
 
         
