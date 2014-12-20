@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<ons-page ng-controller="showidController">
+	<ons-toolbar>
+		<div class="left">
+			<ons-back-button>Back</ons-back-button>
+		</div>
+		<div class="center">เลือก รหัสใบสั่งซื้อ</div>
+	</ons-toolbar>
+	
+	<ul class="list" ng-repeat="b in bill">
+  		<li class="list__item list__item--tappable">
+    		<label class="radio-button radio-button--list-item">
+	      		<input type="radio" name="id" checked="checked" ng-model="my.iSef" ng-value="b.id">
+	      		<div class="radio-button__checkmark radio-button--list-item__checkmark"></div>
+	      		{{b.idBill}}
+    		</label>
+  		</li>
+  	</ul>
+  	
+  	<div class="login-form">
+		<ons-button modifier="large--cta" ng-click="setSelectbill(my.iSef); MainNavigator.popPage();">
+			<i class="fa fa-plus-circle"></i> 
+			<b>ตกลง</b>
+		</ons-button>
+	</div>
+	
+</ons-page>
+
+

@@ -29,6 +29,7 @@ sys.app.controller('LoginController', function($scope, $http, Auth, $route, $rou
 				$http.get(url).success(function(data) {
 					Auth.setUser(data);
 					sharedProperties.deletearrAll();
+					sharedProperties.deleteCalculateBasket();
 					$location.path(path);
 				});
 				
