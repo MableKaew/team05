@@ -1,10 +1,11 @@
-<meta charset="utf-8"  />
+<meta charset="utf-8" />
 <ons-page ng-controller="ManageBillController"> <ons-toolbar>
-<div class="left"
-	ng-click="MainNavigator.pushPage('Shop-Santipab/index.html')">
-	<ons-back-button>Back</ons-back-button>
-</div>
+
 <div class="center">Bill</div>
+
+<div class="right">
+	<ons-toolbar-button ng-click="addBill()">Next</ons-toolbar-button>
+</div>
 </ons-toolbar>
 
 <div class="bill-form">
@@ -19,20 +20,18 @@
 		ng-model="postCode" type="text" class="text-input--underbar"
 		placeholder="รหัสไปรษณีย์" value=""><br> <input
 		ng-model="tel" type="text" class="text-input--underbar"
-		placeholder="เบอร์โทรศัพท์" value=""><br> <br>
-	<br>
+		placeholder="เบอร์โทรศัพท์" value=""><br> <br> <br>
 	<ons-list-item>
 	<div style="float: left; font-weight: bold;">Delivery Type</div>
 	<div style="float: right; padding-right: 10px;">
 		<label class="radio-button"> <input type="radio"
 			name="deliveryType" ng-model="deliveryType" value="Registered">
-			<div class="radio-button__checkmark"></div> registered
+			<div class="radio-button__checkmark"></div> Registered
 		</label> <label class="radio-button"> <input type="radio"
 			name="deliveryType" ng-model="deliveryType" value="EMS">
 			<div class="radio-button__checkmark"></div> EMS
 		</label>
 	</div>
 	</ons-list-item>
-	<ons-button modifier="large" class="Next-button" ng-click="addBill()">Next</ons-button>
 </div>
 </ons-page>
