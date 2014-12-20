@@ -18,6 +18,7 @@ sys.app.factory('Shared', function() {
 	var id = 0;
 	var memberId = 0;
 	
+	var tranid = "";
 	var edituser = {};
 	var editbill = {};
 	var datas = {};
@@ -70,6 +71,15 @@ sys.app.factory('Shared', function() {
 		},
 		setProducts: function(Product) {
 			products = Product;
+		},
+		//for tranfer
+		
+
+		gettranid: function() {
+			return tranid;
+		},
+		settranid: function(id) {
+			tranid = id;
 		}
 	};
 	
@@ -117,7 +127,11 @@ sys.app.service('sharedProperties',function(){
 			return normalprice;
 		},
 		setnormalprice: function(value){
-			normalprice = value;
+			normalprice = normalprice+value;
+		},
+
+		setnormalpriceMinus: function(value){
+			normalprice = normalprice-value;
 		},
 		
 		getbalance: function(){
@@ -128,6 +142,13 @@ sys.app.service('sharedProperties',function(){
 		},
 		setbalanceMinus: function(value){
 			balance = balance-value;
+		},
+		deleteCalculateBasket: function(value){
+			balance = 0;
+			normalprice=0;
+			amount = 0;
+			price = 0;
+			discount=0;
 		},
 	
 		getmemberid: function(){

@@ -18,6 +18,7 @@ sys.app.factory('Shared', function() {
 	var id = 0;
 	var memberId = 0;
 	
+	var tranid = "";
 	var edituser = {};
 	var editbill = {};
 	var datas = {};
@@ -70,6 +71,15 @@ sys.app.factory('Shared', function() {
 		},
 		setProducts: function(Product) {
 			products = Product;
+		},
+		//for tranfer
+		
+
+		gettranid: function() {
+			return tranid;
+		},
+		settranid: function(id) {
+			tranid = id;
 		}
 	};
 	

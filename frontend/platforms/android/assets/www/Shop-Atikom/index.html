@@ -1,57 +1,69 @@
 <meta charset="utf-8">
 
 <ons-navigator title="Navigator" var="myNavigator">
-<ons-page>
+<ons-page ng-controller="ManageTranferMoneyController">
+	<ons-toolbar>
+		<div class="left">
+			<ons-toolbar-button ng-click="menu.toggleMenu()">
+				<ons-icon icon="bars"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+		<div class="center"><b>แจ้งการโอนเงิน</B></div>
+	</ons-toolbar>
 
-  <ons-toolbar>
-    <div class="left">
-    
-    <ons-toolbar-button ng-click="menu.toggle()">
-            <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
-          </ons-toolbar-button>
-    
-    </div>
-    <div class="center">แจ้งผลการโอนเงิน</div>
-    <div class="right">
-        	<ons-toolbar-button onclick="myNavigator.pushPage('Shop-Atikom/page2.html')">ต่อไป
-        		 
-        	</ons-toolbar-button>
-        </div>
-  </ons-toolbar>
-     
-    <div class="formarea">
-        <div class="form-row">
-          <input type="text" class="text-input--underbar width-full" placeholder="หมายเลขใบสั่งซื้อ" value="">
-          </div>
-<br>
-        <div class="form-row">
-          <input type="text" class="text-input--underbar width-full" placeholder="ชื่อลูกค้า" value="">
-          </div>
-<br>          
-         <div class="form-row">
-          <input type="text" class="text-input--underbar width-full" placeholder="วัน-เวลาทำการโอน" value="">
-          </div>
-<br>          
-         <div class="form-row">
-          <input type="text" class="text-input--underbar width-full" placeholder="ยอดเงินทำการโอน" value="">
-          </div>
-<br>          
-         <div class="form-row">
-          <input type="text" class="text-input--underbar width-full" placeholder="อัพรูปใบเสร็จรับเงิน (ถ้ามี)" value="">
-<br>
-<br>          
-            <button class="button button--large" onclick="myNavigator.pushPage('Shop-Atikom/page3.html')">ประวัติผลการโอนเงิน</button>
-          
-          
-          </div>
-<br>
+	
+	
+	<ons-list>
+	
+        <ons-list-header><b>เลือกรหัสใบสั่งซื้อ</b></ons-list-header>
+		<ons-list-item modifier="chevron"  ng-click="MainNavigator.pushPage('Shop-Atikom/showid.html')">
+			กรุณาเลือก
+        </ons-list-item>
+	
         
-      </div>
-<br>      
-       
+		<ons-list-header style="font-size:15px"><b>ชื่อลูกค้า</b></ons-list-header>
+		<ons-list-item>
+			<input type="text" ng-model="name" class="text-input text-input--transparent" placeholder="กรุณากรอก">
+		</ons-list-item>
+		
+		<ons-list-header style="font-size:15px"><b>นามสกุลลูกค้า</b></ons-list-header>
+		<ons-list-item>
+			<input type="text" ng-model="lastname" class="text-input text-input--transparent" placeholder="กรุณากรอก">
+		</ons-list-item>
+		
+		<ons-list-header style="font-size:15px"><b>วันเวลาที่โอน</b></ons-list-header>
+		<ons-list-item>
+			<input type="text" ng-model="date" class="text-input text-input--transparent" placeholder="12.00น. 15/05/2557">
+		</ons-list-item>
+        
+		<ons-list-header style="font-size:15px"><b>จำนวนเงินที่โอน</b></ons-list-header>
+		<ons-list-item>
+    		<input type="text" ng-model="balance" class="text-input text-input--transparent" placeholder="จำนวนเงินที่โอน-บาท">
+		</ons-list-item>
+		
+		<ons-list-header style="font-size:15px"><b>รูปภาพใบเสร็จ</b></ons-list-header>
+		<ons-list-item>
+    		<input type="text" ng-model="picture" class="text-input text-input--transparent" placeholder="รูปภาพใบเสร็จถ้ามี">
+		</ons-list-item>
+		
+		
+		
+		
+	   	<ons-list-header></ons-list-header>
+	</ons-list>
+	
+	<div style="text-align:center">
+		<ons-button ng-click="addtranfer()">
+			<i class="fa fa-check-square-o"></i> 
+			<b>เพิ่มรายการ</b>
+		</ons-button>
 
-<br>
-    
- 
+		<ons-button ng-click="MainNavigator.pushPage('Shop-Atikom/showTranferMoney.html')">
+			<i class="fa fa-rss"></i> 
+			<b>แสดงรายการ</b>
+		</ons-button>
+	</div>
+	
 </ons-page>
+
 </ons-navigator>

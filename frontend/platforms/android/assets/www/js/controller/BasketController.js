@@ -4,17 +4,24 @@ sys.app.controller('ManageBasketController', function($scope, $http, Shared, Aut
 	$scope.ar= sharedProperties.getarr();
 	//นำค่าราคาทั้งหมดที่ต้องจ่ายมาแสดง
 	$scope.price=sharedProperties.getbalance();
+	//นำค่าราคาปกติทั้งหมดที่ต้องจ่ายมาแสดง
+	$scope.normalprice=sharedProperties.getnormalprice();
 	
 	//ใช้นำสินค้าลงตะกร้า ในหน้าเลือกดูสินค้า
 	$scope.setArrProductId = function(product){
 		sharedProperties.setarr(product.id);
 		var a= sharedProperties.getarr();
-		console.log(a);
+		console.log("ในตะกร้า: "+a);
 		alert("ลงตะกร้าแล้ว");
-		//คำนวณราคาสินค้า
+		//คำนวณราคาสินค้าที่ต้องจ่าย
 		sharedProperties.setbalance(product.price);
 		var b= sharedProperties.getbalance();
-		console.log(b);
+		console.log("ราคาสุทธิ: "+b);
+		//คำนวณราคาปกติ
+		sharedProperties.setnormalprice(product.normalprice);
+		var c= sharedProperties.getnormalprice();
+		console.log("รวมราคาปกติ: "+c);
+		
 		
 		
 	}
@@ -101,12 +108,19 @@ $scope.selectDelete = function(){
 //====delete product
 $scope.deleteProduct =function(product){
 	if(confirm('คุณแน่ใจที่จะลบ ?')){
+		//ลบสินค้า
 		sharedProperties.deletearr(product.id);
 		$scope.ar= sharedProperties.getarr();
+		//ลบราคาสุทธิ
 		sharedProperties.setbalanceMinus(product.price);
 		var b= sharedProperties.getbalance();
 		console.log(b);
 		$scope.price=sharedProperties.getbalance();
+		//ลบราคาปกติ
+		sharedProperties.normalpriceMinus(product.normalprice);
+		var c= sharedProperties.getnormalprice();
+		console.log(c);
+		$scope.normalprice=sharedProperties.getnormalprice();
 	}
 	var a= sharedProperties.getarr();
 	console.log(a);
