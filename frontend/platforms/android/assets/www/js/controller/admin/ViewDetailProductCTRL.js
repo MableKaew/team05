@@ -1,3 +1,4 @@
+//<!-- ใช้กับผู้ใช้ทั่วไป -->
 sys.app.controller('adminViewDetailProductCTRL',function($scope, $http, Shared){
 	var baseUrl = Shared.getBaseUrl();
 
@@ -5,7 +6,7 @@ sys.app.controller('adminViewDetailProductCTRL',function($scope, $http, Shared){
 	
 	
 	
-$scope.showProductDetailAll = function(){
+$scope.showProductDetailAlluser = function(id){
 	var Product = Shared.getProducts();
 		var subUrl='/product/show/'+Product;
 		
@@ -13,7 +14,7 @@ $scope.showProductDetailAll = function(){
 			$scope.datas=data;
 		});
 	}
-	$scope.showProductDetailAll();
+	$scope.showProductDetailAlluser();
 	
 	
 	

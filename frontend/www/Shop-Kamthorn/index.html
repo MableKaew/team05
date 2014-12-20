@@ -1,9 +1,9 @@
 <meta charset="utf-8">
-<ons-navigator title="Navigator" var="myNavigator">
+
 <ons-page>
   <ons-toolbar>
     <div class="left">
-          <ons-back-button onclick="menu.setMainPage('index.html', { animation : 'slide' } )">Back</ons-back-button>
+          <ons-back-button>ย้อนกลับ </ons-back-button>
         </div>
     <div class="center">จัดการสินค้า</div>
    
@@ -12,14 +12,13 @@
   
   <ul class="list">
   
-  <li class="list__item list__item--chevron" ng-click="myNavigator.pushPage('Shop-Kamthorn/page2.html')">
+  <li class="list__item list__item--chevron" ng-click="MainNavigator.pushPage('Shop-Kamthorn/page2.html')">
     จัดการประเภทสินค้า
   </li>
-  <li class="list__item list__item--chevron" ng-click="myNavigator.pushPage('Shop-Kamthorn/page6.html')">
+  <li class="list__item list__item--chevron" ng-click="MainNavigator.pushPage('Shop-Kamthorn/page6.html')">
    จัดการสินค้า
   </li>
  
 </ul>
   
 </ons-page>
-</ons-navigator>

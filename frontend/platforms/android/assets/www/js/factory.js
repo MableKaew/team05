@@ -18,6 +18,7 @@ sys.app.factory('Shared', function() {
 	var id = 0;
 	var memberId = 0;
 	
+	var type = 0;
 	var tranid = "";
 	var edituser = {};
 	var editbill = {};
@@ -80,7 +81,14 @@ sys.app.factory('Shared', function() {
 		},
 		settranid: function(id) {
 			tranid = id;
-		}
+		},
+		// admin select type
+		gettype: function() {
+			return type;
+		},
+		settype: function(id) {
+			type = id;
+		},
 	};
 	
 });

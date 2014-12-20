@@ -25,10 +25,18 @@ public class ViewProductController {
    public List<ProductType> showProductTypeAll(){
 	   return (List<ProductType>) productTypeRepo.findAll();
    }
+   
+   //ไม่ได้ใช้
+   @RequestMapping("/productype/show1/{id}")
+   @ResponseBody
+   public ProductType showProductTypeId1(@PathVariable("id") Long id){
+	   return productTypeRepo.findOne(id);
+   }
+   //แก้ไขค้นหา product โดย productType
    @RequestMapping("/productype/show/{id}")
    @ResponseBody
-   public ProductType showProductTypeId(@PathVariable("id") Long id){
-	   return productTypeRepo.findOne(id);
+   public List<Product> showProductTypeId(@PathVariable("id") Long id){
+	   return productRepo.findByinProductType(productTypeRepo.findOne(id));
    }
    
    @RequestMapping("/product/show/{id}")

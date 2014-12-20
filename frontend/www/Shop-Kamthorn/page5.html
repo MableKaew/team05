@@ -1,36 +1,28 @@
+
  <meta charset="utf-8">
- 
- <ons-page ng-controller="adminViewProductTypeController">
-      <ons-toolbar>
-        <div class="left">
-       <ons-toolbar-button>
-    	<ons-back-button ng-click="menu.setMainPage('Shop-Kamthorn/page7.html')">Back
-    	</ons-back-button>
-          </ons-toolbar-button>
-          </div>
-        <div class="right">
-          <ons-toolbar-button ng-click="menu.setMainPage('Shop-Kamthorn/page6.html')">บันทึก
-          </ons-toolbar-button>
-        </div>
-		
-        <div class="center">เลือกประเภทสินค้า</div>
-      </ons-toolbar>
-      
+<ons-page ng-controller="adminViewProductTypeController" ng-controller ="adminViewDetailProductCTRL">
+	<ons-toolbar>
+		<div class="left">
+			<ons-back-button>Back</ons-back-button>
+		</div>
+		<div class="center">หมวดสินค้า</div>
+	</ons-toolbar>
 	
-	   
-      
-<ons-list style="margin: auto 0px auto 0px;">
-      
-      <ons-list-item modifier="chevron" ng-repeat="productType in productTypes">
-      		
-          <label class="checkbox checkbox--noborder checkbox--list-item">
-            <input type="checkbox">
-            <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
-          	 {{productType.name}}
-          </label>
-       
-      </ons-list-item>
-      
-      </ons-list>
-        	
-    </ons-page>
+	<ul class="list" ng-repeat="productType in productTypes">
+  		<li class="list__item list__item--tappable">
+    		<label class="radio-button radio-button--list-item">
+	      		<input type="radio" name="id" checked="checked" ng-model="my.iSef" ng-value="productType">
+	      		<div class="radio-button__checkmark radio-button--list-item__checkmark"></div>
+	      		{{productType.name}}
+    		</label>
+  		</li>
+  	</ul>
+  	
+  	<div class="login-form">
+		<ons-button modifier="large--cta" ng-click="showProduct(my.iSef); MainNavigator.popPage();">
+			<i class="fa fa-plus-circle"></i> 
+			<b>ตกลง</b>
+		</ons-button>
+	</div>
+	
+</ons-page>

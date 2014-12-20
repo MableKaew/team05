@@ -117,7 +117,7 @@ $scope.deleteProduct =function(product){
 		console.log(b);
 		$scope.price=sharedProperties.getbalance();
 		//ลบราคาปกติ
-		sharedProperties.normalpriceMinus(product.normalprice);
+		sharedProperties.setnormalpriceMinus(product.normalprice);
 		var c= sharedProperties.getnormalprice();
 		console.log(c);
 		$scope.normalprice=sharedProperties.getnormalprice();
