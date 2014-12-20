@@ -8,7 +8,7 @@ sys.app.config(function($sceDelegateProvider, $routeProvider, $locationProvider)
    
    $routeProvider
    .when('/login', {
-	   templateUrl: '_login.html',
+	   templateUrl: 'Shop-mallika/user-productType.html', 
    })
    .when('/index', {
 	   templateUrl: '_home.html',	

@@ -1,11 +1,17 @@
 <meta charset="utf-8" />
 
-<ons-navigator title="loginNavigator" var="loginNavigator">
+
 <ons-page ng-controller = "LoginController">
 	<ons-toolbar>
+	 <div class="left">
+          <ons-back-button >ย้อนกลับ </ons-back-button>
+        </div>
 		<div class="center">
 			เข้าสู่ระบบ
 		</div>
+		<div class="right">
+          <ons-toolbar-button ng-click= "loginNavigator.pushPage('shop-user/index.html', { animation : 'slide' } )">สมัครสมาชิก</ons-toolbar-button>
+          </div>
 	</ons-toolbar>
 	<div class="login-form" ng-show='!checkLogin'>
 	
@@ -28,9 +34,6 @@
 	 <ons-icon icon="fa-bookmark"></ons-icon>
           เลือกดูสินค้า
 	</ons-list-item>
-	<ons-list-item modifier="chevron" onclick="loginNavigator.pushPage('shop-user/index.html', { animation : 'slide' } )">
-	  สมัครสมาชิก
-	</ons-list-item>
+	
 	</ons-list>
 </ons-page>
-</ons-navigator>
