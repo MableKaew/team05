@@ -83,14 +83,69 @@ sys.app.service('sharedProperties',function(){
 	arr = [];
 	var arrProduct = new Array();
 	arrProduct = [];
+	//ส่วนคำนวณในตะกร้า
+	var price =0;
+	var amount=0;
+	var discount=0;
+	var normalprice=0;
+	var balance=0;
 	
 	return {
+		
+		getprice: function(){
+			return price;
+		},
+		setprice: function(value){
+			price = value;
+		},
+		
+		getamount: function(){
+			return amount;
+		},
+		setamount: function(value){
+			amount = value;
+		},
+		
+		getdiscount: function(){
+			return discount;
+		},
+		setdiscount: function(value){
+			discount = value;
+		},
+		
+		getnormalprice: function(){
+			return normalprice;
+		},
+		setnormalprice: function(value){
+			normalprice = normalprice+value;
+		},
+
+		setnormalpriceMinus: function(value){
+			normalprice = normalprice-value;
+		},
+		
+		getbalance: function(){
+			return balance;
+		},
+		setbalance: function(value){
+			balance = balance+value;
+		},
+		setbalanceMinus: function(value){
+			balance = balance-value;
+		},
+		deleteCalculateBasket: function(value){
+			balance = 0;
+			normalprice=0;
+			amount = 0;
+			price = 0;
+			discount=0;
+		},
 	
 		getmemberid: function(){
 			return memberid;
 		},
 		setmemberid: function(value){
-			memberid = value
+			memberid = value;
 		},
 	
 		getarr:function(){

@@ -2,18 +2,20 @@ sys.app.controller('ManageBasketController', function($scope, $http, Shared, Aut
 	var baseUrl = Shared.getBaseUrl();
 	//นำค่า array ของ product มาแสดง
 	$scope.ar= sharedProperties.getarr();
+	//นำค่าราคาทั้งหมดที่ต้องจ่ายมาแสดง
+	$scope.price=sharedProperties.getbalance();
 	
 	//ใช้นำสินค้าลงตะกร้า ในหน้าเลือกดูสินค้า
-	$scope.setArrProductId = function(productId){
-		//sharedProperties.setMemberId(memberId);
-		sharedProperties.setarr(productId);
-		
+	$scope.setArrProductId = function(product){
+		sharedProperties.setarr(product.id);
 		var a= sharedProperties.getarr();
 		console.log(a);
-		console.log(a[0]);
-		console.log(a[1]);
 		alert("ลงตะกร้าแล้ว");
-		//MainNavigator.pushPage( 'Shop-Santipab/basket.html', { animation : 'slide' } );
+		//คำนวณราคาสินค้า
+		sharedProperties.setbalance(product.price);
+		var b= sharedProperties.getbalance();
+		console.log(b);
+		
 		
 	}
 	//============================================ไม่ได้ใช้==================================================
@@ -97,14 +99,19 @@ $scope.selectDelete = function(){
 		$scope.checkDelete= true;
 }
 //====delete product
-$scope.deleteProduct =function(id){
+$scope.deleteProduct =function(product){
 	if(confirm('คุณแน่ใจที่จะลบ ?')){
-		sharedProperties.deletearr(id);
+		sharedProperties.deletearr(product.id);
 		$scope.ar= sharedProperties.getarr();
+		sharedProperties.setbalanceMinus(product.price);
+		var b= sharedProperties.getbalance();
+		console.log(b);
+		$scope.price=sharedProperties.getbalance();
 	}
 	var a= sharedProperties.getarr();
 	console.log(a);
 }
+
 
 
 

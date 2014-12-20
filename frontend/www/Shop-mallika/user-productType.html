@@ -11,9 +11,9 @@
           <ons-toolbar-button ng-click= "loginNavigator.pushPage( '_login.html', { animation : 'fade' } )">Log In </ons-toolbar-button>
           </div>
    </ons-toolbar>
-   <div>
+  
   <ons-list>  <img src="http://www.websitebuilder-test.com/wp-content/uploads/Onlineshop-erstellen.jpg" width="250" height="250" class="center"> </ons-list>
-   
+   <ons-scroller style="margin: auto 0px auto 0px;">
       <ons-list style="margin: auto 0px auto 0px;">
      <ons-list-header> ประเภทสินค้า </ons-list-header>
       <ons-list-item modifier="chevron" ng-repeat="productType in productTypes">
@@ -25,6 +25,6 @@
       </ons-list-item>
       
       </ons-list>
-   </div>
+</ons-scroller>
    </ons-page>
    </ons-navigator>
