@@ -7,7 +7,7 @@
         </div>
    <div class="right">
   			<ons-toolbar-button>
-              <ons-icon icon="ion-minus" fixed-width="false" style="vertical-align: -4px;" ng-click="menu.setMainPage()">ลบ</ons-icon>
+              <ons-icon icon="ion-minus" fixed-width="false" style="vertical-align: -4px;" ng-click="MainNavigator.pushPage()">ลบ</ons-icon>
             </ons-toolbar-button>
       </div>
   <div class="center">ดูรายละเอียดสินค้า</div>
@@ -30,17 +30,23 @@
               {{datas.name}}
               </div>
                 <br>
-              
+              <div class="left">
            <div class="location">
                 <i class="fa fa-map-marker"></i> ราคาขาย :	{{datas.price}} บาท  
               </div>
               
-               
+               <div class="location">
+                <i class="fa fa-map-marker"></i> ราคาปรกคิ :	<strike>{{datas.normalprice}}</strike> บาท 
+              </div>
+              
+               <div class="location">
+                <i class="fa fa-map-marker"></i> ประหยัดทันที :	{{datas.discount}} บาท 
+              </div>
               
               <div class="location">
                 <i class="fa fa-map-marker"></i> สินค้ามีจำนวน :	{{datas.amount}}  ชิ้น  
               </div>
-              
+              </div>
                 <br>
               <div class="desc">
                       รายละเอียด :

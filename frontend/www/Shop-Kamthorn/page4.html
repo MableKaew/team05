@@ -1,14 +1,12 @@
  <meta charset="utf-8">
-  <ons-page>
+ 
+  <ons-page ng-controller="ManageProductTypeController">
       <ons-toolbar>
      <div class="left">
-       <ons-toolbar-button>
-    	<ons-back-button ng-click="menu.setMainPage('Shop-Kamthorn/page6.html')">Back
-    	</ons-back-button>
-          </ons-toolbar-button>
-          </div>
+          <ons-back-button>ย้อนกลับ </ons-back-button>
+        </div>
      <div class="right">
-          <ons-toolbar-button ng-click="menu.setMainPage('Shop-Kamthorn/page5.html')">ต่อไป
+          <ons-toolbar-button ng-click="addProduct()">บันทึก
           </ons-toolbar-button>
         </div>
 		
@@ -17,17 +15,37 @@
 		</div>
 	</ons-toolbar>
 	
+	<br>
+	   <ons-list-header><b>เลือกประเภทสินค้า</b></ons-list-header>
+	<ons-list-item modifier="chevron"  ng-click="MainNavigator.pushPage('Shop-Kamthorn/page5.html')">
+			กรุณาเลือก
+        </ons-list-item>
+        
+<ons-list>
+	<div class="product-form" >
 	
-	   
-
-	<div class="login-form" ng-show='!checkLogin'>
-        <input ng-model="productName" type="text" class="text-input--underbar" placeholder="ชื่อสินค้า" style="margin-top:50px; width: 85%;">
-    <br><br>
-        <input ng-model="productdetail" type="text" class="text-input--underbar" placeholder="รายละเอียดสินค้า" style="margin-top:8px; width: 85%;">
-  	<br><br>
-  		<input ng-model="productdetail" type="text" class="text-input--underbar" placeholder="จำนวนสินค้า" style="margin-top:8px; width: 85%;">
-    <br><br>
-        <input ng-model="productdetail" type="text" class="text-input--underbar" placeholder="ราคาสินค้า" style="margin-top:8px; width: 85%;">
-           
+        <input ng-model="name" type="text" class="text-input--underbar" placeholder="ชื่อสินค้า" style="margin-top:8px; width: 85%;">
+    
+        <input ng-model="detail" type="text" class="text-input--underbar" placeholder="รายละเอียดสินค้า" style="margin-top:8px; width: 85%;">
+  	
+  		<input ng-model="amount" type="text" class="text-input--underbar" placeholder="จำนวนสินค้า" style="margin-top:8px; width: 85%;">
+   
+        <input ng-model="normalprice" type="text" class="text-input--underbar" placeholder="ราคาปกติ" style="margin-top:8px; width: 85%;">
+     
+        <input ng-model="discount" type="text" class="text-input--underbar" placeholder="ส่วนลด" style="margin-top:8px; width: 85%;">
+        
+        <input ng-model="price" type="text" class="text-input--underbar" placeholder="ราคาสินค้า" style="margin-top:8px; width: 85%;">
+     
+     
+     <ons-list-item>
+     	<input ng-model="picture" type="text" class="text-input--underbar" placeholder="รูปภาพ" style="margin-top:8px; width: 85%;">
+     </ons-list-item>  
+      <br>
+     <ons-list-item ng-if="picture">
+     	<img src="{{picture}}" width="40%" style="margin-top:10px;" />
+     </ons-list-item>     
 	</div>
+	</ons-list>
+	
+	
 </ons-page>

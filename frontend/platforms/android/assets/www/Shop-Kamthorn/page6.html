@@ -4,10 +4,12 @@
    
    <ons-toolbar>
         <div class="left">
-       <ons-toolbar-button>
-    	<ons-back-button ng-click="menu.setMainPage('Shop-Kamthorn/index.html')">Back
-    	</ons-back-button>
-          </ons-toolbar-button>
+          <ons-back-button>ย้อนกลับ </ons-back-button>
+        </div>
+          <div class="right" ng-controller ="ManageProductTypeController">
+            <ons-button>
+              <ons-icon icon="ion-plus" fixed-width="false" style="vertical-align: -4px;" onclick="MainNavigator.pushPage('Shop-Kamthorn/page4.html')">เพิ่ม</ons-icon>
+            </ons-button>
           </div>
         <div class="center">หมวดสินค้า</div>
    </ons-toolbar>

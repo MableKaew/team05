@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Product {
@@ -35,6 +36,19 @@ public class Product {
 
 	@Column
 	private int normalprice;
+	
+	@OneToOne
+	private ProductType inProductType;
+	
+	
+
+	public ProductType getInProductType() {
+		return inProductType;
+	}
+
+	public void setInProductType(ProductType inProductType) {
+		this.inProductType = inProductType;
+	}
 
 	public Long getId() {
 		return id;

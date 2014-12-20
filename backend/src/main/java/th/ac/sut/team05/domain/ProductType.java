@@ -44,7 +44,7 @@ public class ProductType {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+/*
 	public Collection<Product> getHave() {
 		return have;
 	}
@@ -56,7 +56,7 @@ public class ProductType {
 	@OneToMany
 	private Collection<Product> have;
 	
-	
+	*/
 
 	
 }

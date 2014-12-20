@@ -1,17 +1,10 @@
-﻿sys.app.controller('adminViewProductController',function($scope, $http, Shared){
+//<!-- ใช้กับผู้ใช้ทั่วไป -->
+sys.app.controller('adminViewProductController',function($scope, $http, Shared){
 	var baseUrl = Shared.getBaseUrl();
 
-//////////model ไม่ได้ใช้
-	$scope.showProductDetail1 = function(id){
-		var subUrl='/product/show/'+id;
-		$http.get(baseUrl + subUrl).success(function(data){
-			$scope.data=data;
-		});
-		//ModalDetail.show();
-	}
-	
+
 //////////page ได้ใช้จริง
-$scope.showProductAll = function(){
+$scope.showProductAlluser = function(id){
 	var Productype = Shared.getProductypes();	
 		var subUrl='/productype/show/'+Productype;
 		
@@ -19,12 +12,12 @@ $scope.showProductAll = function(){
 			$scope.products=data;
 		});
 	}
-	$scope.showProductAll();
-//////////page ได้ใช้จริง กับ admin
-	$scope.showProductDetail_admin = function(id){
-		Shared.setProducts(id);
-		MainNavigator.pushPage( 'Shop-Kamthorn/page7.html', { animation : 'slide' } );
-	}
+	$scope.showProductAlluser();
 
+//////////page ได้ใช้จริง กับ ผู้ใช้ทั่วไป
+	$scope.showProductDetail_user = function(id){
+		Shared.setProducts(id);
+		loginNavigator.pushPage( 'Shop-mallika/page3.html', { animation : 'slide' } );
+	}
 	
 });
