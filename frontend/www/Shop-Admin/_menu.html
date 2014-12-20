@@ -1,8 +1,18 @@
 ﻿<meta charset="utf-8">
 <ons-navigator title="Navigator" var="myNavigator">
  <ons-page ng-controller ="MenuController">
-      <ons-toolbar > <div class="center">ระบบสั่งซื้อสินค้าออนไลน์</div></ons-toolbar>
-<ons-list>  <img src="http://www.websitebuilder-test.com/wp-content/uploads/Onlineshop-erstellen.jpg" width="250" height="250" class="center"> </ons-list>
+      <ons-toolbar > <div class="center"><b>ระบบสั่งซื้อสินค้าออนไลน์</b></div></ons-toolbar>
+      <ons-list>
+       <div ng-controller ="ViewUserController">
+ 
+     <div align="center">
+     <br>
+    <b> สวัสดีครับ  คุณผู้ดูแล  {{User.name}}  {{User.lastname}}</b>
+    <br>
+</div>
+    </div>
+  <img src="http://www.websitebuilder-test.com/wp-content/uploads/Onlineshop-erstellen.jpg" width="250" height="250" class="center"> </ons-list>
+   
       <ons-list >
       <ons-list-header><div class="center">เมนูผู้ดูแลระบบ</div></ons-list-header>
         <ons-list-item  modifier="chevron" onclick="myNavigator.pushPage('Shop-Kamthorn/index.html', { animation : 'slide' } )"">
@@ -29,7 +39,7 @@
            <div class="notification menu-notification">8</div>
         </ons-list-item>
 
-        <ons-list-item  modifier="chevron" >
+        <ons-list-item   >
           <a href="logout">ออกจากระบบ</a>
         </ons-list-item>
 

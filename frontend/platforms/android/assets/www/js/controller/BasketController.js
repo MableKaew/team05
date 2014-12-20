@@ -1,10 +1,9 @@
 sys.app.controller('ManageBasketController', function($scope, $http, Shared, Auth, sharedProperties) {
 	var baseUrl = Shared.getBaseUrl();
-	//ต้องใช้เป็นลูป เพื่อใส่ค่า
+	//นำค่า array ของ product มาแสดง
 	$scope.ar= sharedProperties.getarr();
-	var arrProduct = new Array();
-	arrProduct = [];
 	
+	//ใช้นำสินค้าลงตะกร้า ในหน้าเลือกดูสินค้า
 	$scope.setArrProductId = function(productId){
 		//sharedProperties.setMemberId(memberId);
 		sharedProperties.setarr(productId);
@@ -17,11 +16,12 @@ sys.app.controller('ManageBasketController', function($scope, $http, Shared, Aut
 		//MainNavigator.pushPage( 'Shop-Santipab/basket.html', { animation : 'slide' } );
 		
 	}
+	//============================================ไม่ได้ใช้==================================================
 	//ต้องใช้เป็นลูป เพื่อใส่ค่า
 	//var ar= sharedProperties.getarr();
 	//var arrProduct = new Array();
 	//arrProduct = [];
-	//==================================
+	
 	$scope.getArrProductId = function(){
 		console.log(a);
 		
@@ -56,7 +56,7 @@ sys.app.controller('ManageBasketController', function($scope, $http, Shared, Aut
 		
 	}
 		//$scope.showProductDetail_All();
-//========================================================	
+
 	$scope.setproductId = function(memberId,productId){
 		sharedProperties.setMemberId(memberId);
 		sharedProperties.setarr(productId);
@@ -67,8 +67,8 @@ $scope.deletearr = function(arrid){
 		sharedProperties.deletearr(arrid);
 		//$scope.GotoPage('reg-registration/index');
 	}
-
-
+//==========================================================================================================
+///==================บันทึกลง DB========================
 $scope.getProductBasket = function(){
 		var arr = sharedProperties.getarr();
 		//var memberId = sharedProperties.getMemberId();
@@ -80,7 +80,7 @@ $scope.getProductBasket = function(){
 			alert(data);
 		});
 	}
-//================================
+//=============แสดง product ในตะกร้า
 $scope.showProduct = function(){
 	var subUrl = '/product/showall';
 	$http.get(baseUrl + subUrl).success(function(data){
@@ -105,5 +105,8 @@ $scope.deleteProduct =function(id){
 	var a= sharedProperties.getarr();
 	console.log(a);
 }
+
+
+
 
 });
